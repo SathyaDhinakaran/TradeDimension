@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 80, Failures: 1, Errors: 0, Skipped: 79, Time elapsed: 2.968 sec <<< FAILURE!
+setUp(com.tdm.qa.testcases.AboutPageTest)  Time elapsed: 2.766 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy10.sendKeys(Unknown Source)
+	at com.tdm.qa.pages.LoginPage.login(LoginPage.java:51)
+	at com.tdm.qa.testcases.AboutPageTest.setUp(AboutPageTest.java:32)
+

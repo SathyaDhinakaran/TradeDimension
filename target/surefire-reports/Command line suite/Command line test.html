@@ -1,0 +1,540 @@
+<html>
+<head>
+<title>TestNG:  Command line test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Command line test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/28</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Sep 12 16:51:56 IST 2019</td>
+</tr>
+<tr><td>Total time:</td><td>2 seconds (2191 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.tdm.qa.testcases.AboutPageTest.setUp()'><b>setUp</b><br>Test class: com.tdm.qa.testcases.AboutPageTest</td>
+<td><div><pre>java.lang.NullPointerException
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy10.sendKeys(Unknown Source)
+	at com.tdm.qa.pages.LoginPage.login(LoginPage.java:51)
+	at com.tdm.qa.testcases.AboutPageTest.setUp(AboutPageTest.java:32)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1030684756", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1030684756'><pre>java.lang.NullPointerException
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy10.sendKeys(Unknown Source)
+	at com.tdm.qa.pages.LoginPage.login(LoginPage.java:51)
+	at com.tdm.qa.testcases.AboutPageTest.setUp(AboutPageTest.java:32)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:514)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:215)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:656)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.tdm.qa.testcases.AboutPageTest.setUp()'><b>setUp</b><br>Test class: com.tdm.qa.testcases.AboutPageTest</td>
+<td></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.AboutPageTest.setUp()'><b>setUp</b><br>Test class: com.tdm.qa.testcases.AboutPageTest</td>
+<td></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.AboutPageTest.SetUp()'><b>SetUp</b><br>Test class: com.tdm.qa.testcases.AboutPageTest</td>
+<td></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.AddNotifPageTest.setUp()'><b>setUp</b><br>Test class: com.tdm.qa.testcases.AddNotifPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.AddNotifPageTest@366e2eef</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.CheckInHistoryPageTest.setUp()'><b>setUp</b><br>Test class: com.tdm.qa.testcases.CheckInHistoryPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.CheckInHistoryPageTest@3cbbc1e0</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.CheckInPageTest.setUp()'><b>setUp</b><br>Test class: com.tdm.qa.testcases.CheckInPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.CheckInPageTest@35fb3008</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.LoginPageTest.setUp()'><b>setUp</b><br>Test class: com.tdm.qa.testcases.LoginPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.LoginPageTest@54a097cc</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.MissingStorePageTest.setUp()'><b>setUp</b><br>Test class: com.tdm.qa.testcases.MissingStorePageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.MissingStorePageTest@36f6e879</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.OwnDataPageTest.setUp()'><b>setUp</b><br>Test class: com.tdm.qa.testcases.OwnDataPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.OwnDataPageTest@52af6cff</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.SavedQueryPageTest.setUp()'><b>setUp</b><br>Test class: com.tdm.qa.testcases.SavedQueryPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.SavedQueryPageTest@2c9f9fb0</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.AdvSearchPageTest.setUp()'><b>setUp</b><br>Test class: com.tdm.qa.testcases.AdvSearchPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.AdvSearchPageTest@6df97b55</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.HomePageTest.setUp()'><b>setUp</b><br>Test class: com.tdm.qa.testcases.HomePageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.HomePageTest@7225790e</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.MoreOptionPageTest.setUp()'><b>setUp</b><br>Test class: com.tdm.qa.testcases.MoreOptionPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.MoreOptionPageTest@5a61f5df</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.NearMePageTest.setUp()'><b>setUp</b><br>Test class: com.tdm.qa.testcases.NearMePageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.NearMePageTest@3551a94</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.NotificationsPageTest.setUp()'><b>setUp</b><br>Test class: com.tdm.qa.testcases.NotificationsPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.NotificationsPageTest@531be3c5</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.PrevCheckinPageTest.setUp()'><b>setUp</b><br>Test class: com.tdm.qa.testcases.PrevCheckinPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.PrevCheckinPageTest@735b478</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.SelectFieldPageTest.setUp()'><b>setUp</b><br>Test class: com.tdm.qa.testcases.SelectFieldPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.SelectFieldPageTest@2096442d</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.SettingsEditPageTest.setUp()'><b>setUp</b><br>Test class: com.tdm.qa.testcases.SettingsEditPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.SettingsEditPageTest@9f70c54</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.SignOutPageTest.setUp()'><b>setUp</b><br>Test class: com.tdm.qa.testcases.SignOutPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.SignOutPageTest@737996a0</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.StoreDetailsPageTest.setUp()'><b>setUp</b><br>Test class: com.tdm.qa.testcases.StoreDetailsPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.StoreDetailsPageTest@61dc03ce</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.HomePageTest.setUp()'><b>setUp</b><br>Test class: com.tdm.qa.testcases.HomePageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.HomePageTest@7225790e</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.SelectFieldPageTest.setUp()'><b>setUp</b><br>Test class: com.tdm.qa.testcases.SelectFieldPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.SelectFieldPageTest@2096442d</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.SettingsEditPageTest.setUp()'><b>setUp</b><br>Test class: com.tdm.qa.testcases.SettingsEditPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.SettingsEditPageTest@9f70c54</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.SettingsPageTest.setUp()'><b>setUp</b><br>Test class: com.tdm.qa.testcases.SettingsPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.SettingsPageTest@234bef66</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.SignOutPageTest.setUp()'><b>setUp</b><br>Test class: com.tdm.qa.testcases.SignOutPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.SignOutPageTest@737996a0</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.StoreDetailsPageTest.setUp()'><b>setUp</b><br>Test class: com.tdm.qa.testcases.StoreDetailsPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.StoreDetailsPageTest@61dc03ce</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.HomePageTest.setUp()'><b>setUp</b><br>Test class: com.tdm.qa.testcases.HomePageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.HomePageTest@7225790e</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.AddNotifPageTest.tearDown()'><b>tearDown</b><br>Test class: com.tdm.qa.testcases.AddNotifPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.AddNotifPageTest@366e2eef</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.CheckInHistoryPageTest.tearDown()'><b>tearDown</b><br>Test class: com.tdm.qa.testcases.CheckInHistoryPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.CheckInHistoryPageTest@3cbbc1e0</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.CheckInPageTest.tearDown()'><b>tearDown</b><br>Test class: com.tdm.qa.testcases.CheckInPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.CheckInPageTest@35fb3008</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.LoginPageTest.tearDown()'><b>tearDown</b><br>Test class: com.tdm.qa.testcases.LoginPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.LoginPageTest@54a097cc</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.MissingStorePageTest.tearDown()'><b>tearDown</b><br>Test class: com.tdm.qa.testcases.MissingStorePageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.MissingStorePageTest@36f6e879</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.OwnDataPageTest.tearDown()'><b>tearDown</b><br>Test class: com.tdm.qa.testcases.OwnDataPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.OwnDataPageTest@52af6cff</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.SavedQueryPageTest.tearDown()'><b>tearDown</b><br>Test class: com.tdm.qa.testcases.SavedQueryPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.SavedQueryPageTest@2c9f9fb0</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.HierarchiesPageTest.tearDown()'><b>tearDown</b><br>Test class: com.tdm.qa.testcases.HierarchiesPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.HierarchiesPageTest@6537cf78</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.HomePageTest.tearDown()'><b>tearDown</b><br>Test class: com.tdm.qa.testcases.HomePageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.HomePageTest@7225790e</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.MoreOptionPageTest.tearDown()'><b>tearDown</b><br>Test class: com.tdm.qa.testcases.MoreOptionPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.MoreOptionPageTest@5a61f5df</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.NearMePageTest.tearDown()'><b>tearDown</b><br>Test class: com.tdm.qa.testcases.NearMePageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.NearMePageTest@3551a94</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.NotificationsPageTest.tearDown()'><b>tearDown</b><br>Test class: com.tdm.qa.testcases.NotificationsPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.NotificationsPageTest@531be3c5</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.OfflineDataPageTest.tearDown()'><b>tearDown</b><br>Test class: com.tdm.qa.testcases.OfflineDataPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.OfflineDataPageTest@67b6d4ae</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.SelectFieldPageTest.tearDown()'><b>tearDown</b><br>Test class: com.tdm.qa.testcases.SelectFieldPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.SelectFieldPageTest@2096442d</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.StoreDetailsPageTest.tearDown()'><b>tearDown</b><br>Test class: com.tdm.qa.testcases.StoreDetailsPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.StoreDetailsPageTest@61dc03ce</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.HomePageTest.tearDown()'><b>tearDown</b><br>Test class: com.tdm.qa.testcases.HomePageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.HomePageTest@7225790e</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.SelectFieldPageTest.tearDown()'><b>tearDown</b><br>Test class: com.tdm.qa.testcases.SelectFieldPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.SelectFieldPageTest@2096442d</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.SettingsPageTest.tearDown()'><b>tearDown</b><br>Test class: com.tdm.qa.testcases.SettingsPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.SettingsPageTest@234bef66</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.StoreDetailsPageTest.tearDown()'><b>tearDown</b><br>Test class: com.tdm.qa.testcases.StoreDetailsPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.StoreDetailsPageTest@61dc03ce</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.HomePageTest.tearDown()'><b>tearDown</b><br>Test class: com.tdm.qa.testcases.HomePageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.HomePageTest@7225790e</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.AboutPageTest.tearDown()'><b>tearDown</b><br>Test class: com.tdm.qa.testcases.AboutPageTest</td>
+<td></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.AboutPageTest.tearDown()'><b>tearDown</b><br>Test class: com.tdm.qa.testcases.AboutPageTest</td>
+<td></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.AboutPageTest.tearDown()'><b>tearDown</b><br>Test class: com.tdm.qa.testcases.AboutPageTest</td>
+<td></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.AboutPageTest.tearDown()'><b>tearDown</b><br>Test class: com.tdm.qa.testcases.AboutPageTest</td>
+<td></td>
+<td>0</td>
+<td>null</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.tdm.qa.testcases.AddNotifPageTest.addNotification()'><b>addNotification</b><br>Test class: com.tdm.qa.testcases.AddNotifPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.AddNotifPageTest@366e2eef</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.SettingsEditPageTest.assignIcon()'><b>assignIcon</b><br>Test class: com.tdm.qa.testcases.SettingsEditPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.SettingsEditPageTest@9f70c54</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.CheckInPageTest.checkInComm()'><b>checkInComm</b><br>Test class: com.tdm.qa.testcases.CheckInPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.CheckInPageTest@35fb3008</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.StoreDetailsPageTest.clickOnStoreMoreOpt()'><b>clickOnStoreMoreOpt</b><br>Test class: com.tdm.qa.testcases.StoreDetailsPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.StoreDetailsPageTest@61dc03ce</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.ResultListPageTest.downloadOfflineData()'><b>downloadOfflineData</b><br>Test class: com.tdm.qa.testcases.ResultListPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.ResultListPageTest@34b7bfc0</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.MissingStorePageTest.enterMissigStoreDetails()'><b>enterMissigStoreDetails</b><br>Test class: com.tdm.qa.testcases.MissingStorePageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.MissingStorePageTest@36f6e879</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.OwnDataPageTest.fillOwnData()'><b>fillOwnData</b><br>Test class: com.tdm.qa.testcases.OwnDataPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.OwnDataPageTest@52af6cff</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.LoginPageTest.loginTest()'><b>loginTest</b><br>Test class: com.tdm.qa.testcases.LoginPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.LoginPageTest@54a097cc</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.NotificationsPageTest.missingStore()'><b>missingStore</b><br>Test class: com.tdm.qa.testcases.NotificationsPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.NotificationsPageTest@531be3c5</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.SettingsPageTest.resetLegend()'><b>resetLegend</b><br>Test class: com.tdm.qa.testcases.SettingsPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.SettingsPageTest@234bef66</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.AdvSearchPageTest.saveQuery()'><b>saveQuery</b><br>Test class: com.tdm.qa.testcases.AdvSearchPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.AdvSearchPageTest@6df97b55</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.SelectFieldPageTest.selectFieldAndHomePage()'><b>selectFieldAndHomePage</b><br>Test class: com.tdm.qa.testcases.SelectFieldPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.SelectFieldPageTest@2096442d</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.SettingsEditPageTest.selectReset()'><b>selectReset</b><br>Test class: com.tdm.qa.testcases.SettingsEditPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.SettingsEditPageTest@9f70c54</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.HierarchiesPageTest.selectStoreAcc()'><b>selectStoreAcc</b><br>Test class: com.tdm.qa.testcases.HierarchiesPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.HierarchiesPageTest@6537cf78</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.SelectFieldPageTest.setLegendAndSettingsPage()'><b>setLegendAndSettingsPage</b><br>Test class: com.tdm.qa.testcases.SelectFieldPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.SelectFieldPageTest@2096442d</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.SignOutPageTest.signOutNoOption()'><b>signOutNoOption</b><br>Test class: com.tdm.qa.testcases.SignOutPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.SignOutPageTest@737996a0</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.SignOutPageTest.signOutYesOption()'><b>signOutYesOption</b><br>Test class: com.tdm.qa.testcases.SignOutPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.SignOutPageTest@737996a0</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.AboutPageTest.validateAboutPage()'><b>validateAboutPage</b><br>Test class: com.tdm.qa.testcases.AboutPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.AboutPageTest@617c74e5</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.HomePageTest.validateGoogleSearch()'><b>validateGoogleSearch</b><br>Test class: com.tdm.qa.testcases.HomePageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.HomePageTest@7225790e</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.NearMePageTest.validateNavigationOption()'><b>validateNavigationOption</b><br>Test class: com.tdm.qa.testcases.NearMePageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.NearMePageTest@3551a94</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.HomePageTest.validateNielsenSearch()'><b>validateNielsenSearch</b><br>Test class: com.tdm.qa.testcases.HomePageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.HomePageTest@7225790e</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.PrevCheckinPageTest.validatePrevCheckin()'><b>validatePrevCheckin</b><br>Test class: com.tdm.qa.testcases.PrevCheckinPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.PrevCheckinPageTest@735b478</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.CheckInHistoryPageTest.verifyCheckInHist()'><b>verifyCheckInHist</b><br>Test class: com.tdm.qa.testcases.CheckInHistoryPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.CheckInHistoryPageTest@3cbbc1e0</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.HomePageTest.verifyHomePage()'><b>verifyHomePage</b><br>Test class: com.tdm.qa.testcases.HomePageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.HomePageTest@7225790e</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.MoreOptionPageTest.verifyMoreOptionpopup()'><b>verifyMoreOptionpopup</b><br>Test class: com.tdm.qa.testcases.MoreOptionPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.MoreOptionPageTest@5a61f5df</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.OfflineDataPageTest.verifyOfflineDataPage()'><b>verifyOfflineDataPage</b><br>Test class: com.tdm.qa.testcases.OfflineDataPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.OfflineDataPageTest@67b6d4ae</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.SavedQueryPageTest.verifySavedQueryPage()'><b>verifySavedQueryPage</b><br>Test class: com.tdm.qa.testcases.SavedQueryPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.SavedQueryPageTest@2c9f9fb0</td></tr>
+<tr>
+<td title='com.tdm.qa.testcases.StoreDetailsPageTest.verifyStoreHierarchy()'><b>verifyStoreHierarchy</b><br>Test class: com.tdm.qa.testcases.StoreDetailsPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.tdm.qa.testcases.StoreDetailsPageTest@61dc03ce</td></tr>
+</table><p>
+</body>
+</html>
