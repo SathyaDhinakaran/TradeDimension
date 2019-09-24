@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="151394" started-at="2019-09-24T06:24:36Z" finished-at="2019-09-24T06:27:07Z">
+  <suite name="Default suite" duration-ms="119066" started-at="2019-09-24T13:13:19Z" finished-at="2019-09-24T13:15:18Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="151394" started-at="2019-09-24T06:24:36Z" finished-at="2019-09-24T06:27:07Z">
+    <test name="Default test" duration-ms="119066" started-at="2019-09-24T13:13:19Z" finished-at="2019-09-24T13:15:18Z">
       <class name="com.tdm.qa.testcases.SavedQueryPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tdm.qa.testcases.SavedQueryPageTest@3cb5cdba]" name="setUp" is-config="true" duration-ms="74157" started-at="2019-09-24T11:54:36Z" finished-at="2019-09-24T11:55:50Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tdm.qa.testcases.SavedQueryPageTest@3cb5cdba]" name="setUp" is-config="true" duration-ms="74473" started-at="2019-09-24T18:43:19Z" finished-at="2019-09-24T18:44:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="editQuery()[pri:3, instance:com.tdm.qa.testcases.SavedQueryPageTest@3cb5cdba]" name="editQuery" duration-ms="75389" started-at="2019-09-24T11:55:50Z" finished-at="2019-09-24T11:57:06Z">
+        <test-method status="PASS" signature="saveQuery()[pri:4, instance:com.tdm.qa.testcases.SavedQueryPageTest@3cb5cdba]" name="saveQuery" duration-ms="42729" started-at="2019-09-24T18:44:34Z" finished-at="2019-09-24T18:45:16Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- editQuery -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tdm.qa.testcases.SavedQueryPageTest@3cb5cdba]" name="tearDown" is-config="true" duration-ms="1828" started-at="2019-09-24T11:57:06Z" finished-at="2019-09-24T11:57:07Z">
+        </test-method> <!-- saveQuery -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tdm.qa.testcases.SavedQueryPageTest@3cb5cdba]" name="tearDown" is-config="true" duration-ms="1845" started-at="2019-09-24T18:45:16Z" finished-at="2019-09-24T18:45:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

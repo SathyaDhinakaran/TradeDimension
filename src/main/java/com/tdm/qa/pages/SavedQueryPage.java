@@ -150,5 +150,54 @@ public class SavedQueryPage extends BaseClass{
 		}
 		
 	}
+	
+	public void verifySaveQ(String fieldN, String op) {
+		
+		try {
+			driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().text(\""+prop.getProperty(fieldN)+"\").instance(0))");
+			driver.findElement(By.xpath("//*[@text='"+prop.getProperty(fieldN)+"']//following::android.view.ViewGroup[@index='2']")).click();
+			driver.findElement(By.xpath("//*[@text='"+prop.getProperty(op)+"']")).click();
+			selOper.click();
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			
+			e.printStackTrace();
+		}
+		
+	}
+	
+	public void clickOnSave() {
+		
+		try {
+			savedQryScreen.click();
+			saveBtn.click();
+			querySave.click();
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			
+			e.printStackTrace();
+		}
+	}
+	
+	public boolean verifySaveQuery(String fieldNAct, String exp) {
+		
+	
+			/*driver.findElement(By.xpath("//*[@text='"+prop.getProperty(fieldNAct)+"']")).click();
+			System.out.println("clicked");*/
+			//driver.findElement(By.xpath("//*[@text='"+prop.getProperty(fieldNAct)+"']//following::android.view.ViewGroup[@index='2']")).click();
+			
+			String actual=driver.findElement(By.xpath("//*[@text='"+prop.getProperty(fieldNAct)+"']//following::android.view.ViewGroup[@index='1']/android.widget.TextView")).getText();
+			System.out.println("Actual: "+actual);
+			String expected=prop.getProperty(exp);
+			System.out.println("Expected: "+expected);
+			if(actual.contentEquals(expected)) 
+				return true;
+			else 
+				return false;
+			
+		
+		
+	}
+	
 }
 

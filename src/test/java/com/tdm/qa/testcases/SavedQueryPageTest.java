@@ -45,7 +45,7 @@ public class SavedQueryPageTest extends BaseClass{
 		Assert.assertTrue(nearmepage.verifyNearMeShop());
 		   
 	}*/
-	
+	/*
 	@Test(priority=3)
 	public void editQuery() {
 		
@@ -60,6 +60,25 @@ public class SavedQueryPageTest extends BaseClass{
 			e.printStackTrace();
 		}
 		Assert.assertTrue(savedquerypage.verifySavedQry("saveQueryName"));
+	}*/
+	
+	@Test(priority=4)
+	public void saveQuery() {
+		
+		try {
+			savedquerypage.clickOnEdit();
+			savedquerypage.verifySaveQ("advField4","saveOp");
+			savedquerypage.clickOnSave();
+			homepage.clickOnSavedQuery();
+			savedquerypage.editQuery("saveQueryName");
+			savedquerypage.clickOnEdit();
+			Assert.assertTrue(savedquerypage.verifySaveQuery("advField4", "saveOp"));
+			
+		} catch (Exception e) {
+		
+			e.printStackTrace();
+		}
+		
 	}
 	
 	@AfterMethod
