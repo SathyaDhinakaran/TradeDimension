@@ -32,15 +32,17 @@ public class SavedQueryPageTest extends BaseClass{
 		nearmepage= new NearMePage();
 		homepage=loginpage.login("username", "password");
 		savedquerypage=homepage.clickOnSavedQuery();
-		savedquerypage.editQuery("saveQueryName");
+		
 	}
 	/*@Test(priority=1)
 	public void verifySavedQueryPage() {
+	savedquerypage.editQuery("saveQueryName");
 		Assert.assertTrue(savedquerypage.verifySavedQueryPage());
 	}*/
 	
 	/*@Test(priority=2)
 	public void verifyApplySearch() {
+	savedquerypage.editQuery("saveQueryName");
 		savedquerypage.applySearch();
 		Assert.assertTrue(nearmepage.verifyNearMeShop());
 		   
@@ -50,6 +52,7 @@ public class SavedQueryPageTest extends BaseClass{
 	public void editQuery() {
 		
 		try {
+		savedquerypage.editQuery("saveQueryName");
 			savedquerypage.clickOnEdit();
 			savedquerypage.modifyValue("savedQryAddField","sQOperator","sQVal");	
 			savedquerypage.saveAs("saveAsName");
@@ -62,10 +65,11 @@ public class SavedQueryPageTest extends BaseClass{
 		Assert.assertTrue(savedquerypage.verifySavedQry("saveQueryName"));
 	}*/
 	
-	@Test(priority=4)
+	/*@Test(priority=4, dependsOnMethods="saveQuery")
 	public void saveQuery() {
 		
 		try {
+			savedquerypage.editQuery("saveQueryName");
 			savedquerypage.clickOnEdit();
 			savedquerypage.verifySaveQ("advField4","saveOp");
 			savedquerypage.clickOnSave();
@@ -79,6 +83,12 @@ public class SavedQueryPageTest extends BaseClass{
 			e.printStackTrace();
 		}
 		
+	}*/
+	
+	@Test(priority=6)
+	public void deleteQuery() {
+		savedquerypage.deleteQuery("saveAsName");
+		Assert.assertTrue(savedquerypage.verifyDeleteQry("saveAsName"));
 	}
 	
 	@AfterMethod

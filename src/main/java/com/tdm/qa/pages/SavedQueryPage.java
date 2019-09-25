@@ -1,5 +1,9 @@
 package com.tdm.qa.pages;
 
+import static org.testng.Assert.assertNull;
+
+import java.util.NoSuchElementException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -53,6 +57,9 @@ public class SavedQueryPage extends BaseClass{
 	
 	@FindBy(xpath="//*[@text='Enter query name']")
 	WebElement enterQueryN;
+	
+	@FindBy(xpath="//*[@text='Yes']")
+	WebElement yes;
 	
 	public SavedQueryPage() {
 		PageFactory.initElements(driver, this);
@@ -182,10 +189,6 @@ public class SavedQueryPage extends BaseClass{
 	public boolean verifySaveQuery(String fieldNAct, String exp) {
 		
 	
-			/*driver.findElement(By.xpath("//*[@text='"+prop.getProperty(fieldNAct)+"']")).click();
-			System.out.println("clicked");*/
-			//driver.findElement(By.xpath("//*[@text='"+prop.getProperty(fieldNAct)+"']//following::android.view.ViewGroup[@index='2']")).click();
-			
 			String actual=driver.findElement(By.xpath("//*[@text='"+prop.getProperty(fieldNAct)+"']//following::android.view.ViewGroup[@index='1']/android.widget.TextView")).getText();
 			System.out.println("Actual: "+actual);
 			String expected=prop.getProperty(exp);
@@ -194,10 +197,26 @@ public class SavedQueryPage extends BaseClass{
 				return true;
 			else 
 				return false;
-			
-		
+				
+	}
+	
+	public void deleteQuery(String qryN) {
+		driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().text(\""+prop.getProperty(qryN)+"\").instance(0))");
+		driver.findElement(By.xpath("//*[@text='"+prop.getProperty(qryN)+"']//following::android.view.ViewGroup[@index='2']")).click();
+		yes.click();
 		
 	}
+	
+	public boolean verifyDeleteQry(String qryN) {
+		try {
+		driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().text(\""+prop.getProperty(qryN)+"\").instance(0))").isDisplayed();
+		return false;
+	}catch(NoSuchElementException e) {
+		return true;
+	}
+		
+	
+}
 	
 }
 
