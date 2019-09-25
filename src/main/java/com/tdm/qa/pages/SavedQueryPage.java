@@ -201,20 +201,22 @@ public class SavedQueryPage extends BaseClass{
 	}
 	
 	public void deleteQuery(String qryN) {
-		driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().text(\""+prop.getProperty(qryN)+"\").instance(0))");
-		driver.findElement(By.xpath("//*[@text='"+prop.getProperty(qryN)+"']//following::android.view.ViewGroup[@index='2']")).click();
-		yes.click();
+		
+		try {
+			driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().text(\""+prop.getProperty(qryN)+"\").instance(0))");
+			driver.findElement(By.xpath("//*[@text='"+prop.getProperty(qryN)+"']//following::android.view.ViewGroup[@index='2']")).click();
+			yes.click();
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			
+			e.printStackTrace();
+		}
 		
 	}
 	
-	public boolean verifyDeleteQry(String qryN) {
-		try {
-		driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().text(\""+prop.getProperty(qryN)+"\").instance(0))").isDisplayed();
-		return false;
-	}catch(NoSuchElementException e) {
-		return true;
-	}
-		
+	public int veifyDeletedQry(String qryN)
+	{
+		return driver.findElements(By.xpath("//*[@text='"+prop.getProperty(qryN)+"']")).size();
 	
 }
 	

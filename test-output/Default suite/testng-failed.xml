@@ -6,15 +6,4 @@
       <class name="com.tdm.qa.testcases.SavedQueryPageTest"/>
     </classes>
   </test> <!-- Default test -->
-  <test name="Default test(failed)">
-    <classes>
-      <class name="com.tdm.qa.testcases.SavedQueryPageTest">
-        <methods>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-          <include name="deleteQuery"/>
-        </methods>
-      </class> <!-- com.tdm.qa.testcases.SavedQueryPageTest -->
-    </classes>
-  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
