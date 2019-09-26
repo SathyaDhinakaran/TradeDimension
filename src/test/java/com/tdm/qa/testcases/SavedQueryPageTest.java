@@ -6,6 +6,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.tdm.qa.base.BaseClass;
+import com.tdm.qa.pages.AdvSearchPage;
 import com.tdm.qa.pages.HomePage;
 import com.tdm.qa.pages.LoginPage;
 import com.tdm.qa.pages.NearMePage;
@@ -17,6 +18,7 @@ public class SavedQueryPageTest extends BaseClass{
 	HomePage homepage;
 	SavedQueryPage savedquerypage;
 	NearMePage nearmepage;
+	AdvSearchPage advsearchpage;
 	
 	public SavedQueryPageTest() {
 		super();
@@ -30,26 +32,27 @@ public class SavedQueryPageTest extends BaseClass{
 		homepage=new HomePage();
 		savedquerypage=new SavedQueryPage();
 		nearmepage= new NearMePage();
+		advsearchpage= new AdvSearchPage();
 		homepage=loginpage.login("username", "password");
 		savedquerypage=homepage.clickOnSavedQuery();
 		
 	}
-	/*@Test(priority=1)
+	@Test(priority=1)
 	public void verifySavedQueryPage() {
-	savedquerypage.editQuery("saveQueryName");
-		Assert.assertTrue(savedquerypage.verifySavedQueryPage());
-	}*/
 	
-	/*@Test(priority=2)
+		Assert.assertTrue(savedquerypage.verifySavedQueryPage());
+	}
+	
+	@Test(priority=2)
 	public void verifyApplySearch() {
 	savedquerypage.editQuery("saveQueryName");
 		savedquerypage.applySearch();
 		Assert.assertTrue(nearmepage.verifyNearMeShop());
 		   
-	}*/
-	/*
+	}
+	
 	@Test(priority=3)
-	public void editQuery() {
+	public void saveAsQuery() {
 		
 		try {
 		savedquerypage.editQuery("saveQueryName");
@@ -63,9 +66,9 @@ public class SavedQueryPageTest extends BaseClass{
 			e.printStackTrace();
 		}
 		Assert.assertTrue(savedquerypage.verifySavedQry("saveQueryName"));
-	}*/
+	}
 	
-	/*@Test(priority=4, dependsOnMethods="saveQuery")
+	@Test(priority=4)
 	public void saveQuery() {
 		
 		try {
@@ -83,7 +86,18 @@ public class SavedQueryPageTest extends BaseClass{
 			e.printStackTrace();
 		}
 		
-	}*/
+	}
+	
+	
+	@Test(priority=5)
+	public void clickOnReset(){
+		savedquerypage.editQuery("saveQueryName");
+		
+		savedquerypage.reset("advField4");
+		Assert.assertTrue(savedquerypage.verifyReset("advField4"));
+	
+	}
+	
 	
 	@Test(priority=6)
 	public void deleteQuery() {

@@ -10,6 +10,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.tdm.qa.base.BaseClass;
+import com.tdm.qa.util.TestUtil;
 
 public class SavedQueryPage extends BaseClass{
 	
@@ -48,6 +49,9 @@ public class SavedQueryPage extends BaseClass{
 	
 	@FindBy(xpath="//*[@text='Add Values']//preceding::android.widget.ImageView")
 	WebElement addValBackBtn;
+	
+	@FindBy(xpath="//*[@text='Add Fields']//preceding::android.widget.ImageView")
+	WebElement addFieldBackBtn;
 	
 	@FindBy(id="search_src_text")
 	WebElement searchtxt;
@@ -220,5 +224,36 @@ public class SavedQueryPage extends BaseClass{
 	
 }
 	
+	public void reset(String field) {
+	
+		try {
+			editBtn.click();
+			driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().text(\""+prop.getProperty(field)+"\").instance(0))");
+			driver.findElement(By.xpath("//*[@text='"+prop.getProperty(field)+"']//following::android.view.ViewGroup[@index='4']")).click();
+			addField.click();
+			Thread.sleep(2000);
+			driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().text(\""+prop.getProperty(field)+"\").instance(0))").isDisplayed();
+			
+			Thread.sleep(2000);
+			addFieldBackBtn.click();
+			savedQryScreen.click();
+			resetBtn.click();
+			yes.click();
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+	}
+	
+	public boolean verifyReset(String field) {
+		
+		savedQryScreen.click();
+		editBtn.click();
+		return driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().text(\""+prop.getProperty(field)+"\").instance(0))").isDisplayed();
+		
+	}
 }
 
