@@ -37,9 +37,17 @@ public class TestUtil extends BaseClass {
 	
 	}
 	
-public static void scrollUpAndDown(String text) {
+
+	//removed click method
+	public static void scrollUpAndDown(String text) {
 	
-	driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().text(\""+prop.getProperty(text)+"\").instance(0))").click();
+	driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().text(\""+prop.getProperty(text)+"\").instance(0))");
 		
 	}
+	
+	public static void scrollUpAndDownWithClick(String text) {
+		
+		driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().text(\""+prop.getProperty(text)+"\").instance(0))").click();
+			
+		}
 }

@@ -36,11 +36,11 @@ public class AdvSearchPageTest extends BaseClass{
 		advsearchpage=homepage.clickOnAdvSearch();
 		advsearchpage.clickOnAddFields();
 		
-		TestUtil.scrollUpAndDown("advField1");
-		TestUtil.scrollUpAndDown("advField2");
-		TestUtil.scrollUpAndDown("advField4");
-		TestUtil.scrollUpAndDown("advField3");
-		TestUtil.scrollUpAndDown("advField5");
+		TestUtil.scrollUpAndDownWithClick("advField1");
+		TestUtil.scrollUpAndDownWithClick("advField2");
+		TestUtil.scrollUpAndDownWithClick("advField4");
+		TestUtil.scrollUpAndDownWithClick("advField3");
+		TestUtil.scrollUpAndDownWithClick("advField5");
 		
 		advsearchpage.saveSelectedField();
 		
@@ -53,6 +53,14 @@ public class AdvSearchPageTest extends BaseClass{
 
 	}
 	
+	@Test(priority=1)
+	public void saveQuery() throws Exception {
+		
+		advsearchpage.saveQuery("saveQueryName");
+		homepage.clickOnSavedQuery();
+		Assert.assertTrue(savedquerypage.verifySavedQry("saveQueryName"));
+		
+	}
 		
 	
 	@Test(priority=2)
@@ -62,16 +70,6 @@ public class AdvSearchPageTest extends BaseClass{
 			
 			Assert.assertTrue(nearmepage.verifyNearMeShop());
 		}
-	
-	
-	@Test(priority=1)
-	public void saveQuery() throws Exception {
-		
-		advsearchpage.saveQuery("saveQueryName");
-		homepage.clickOnSavedQuery();
-		Assert.assertTrue(savedquerypage.verifySavedQry("saveQueryName"));
-		
-	}
 	
 	
 	@Test(priority=3)

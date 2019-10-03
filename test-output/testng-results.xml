@@ -1,85 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="6" passed="6">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="612550" started-at="2019-09-26T07:29:42Z" finished-at="2019-09-26T07:39:55Z">
+  <suite name="Default suite" duration-ms="88913" started-at="2019-10-03T10:02:07Z" finished-at="2019-10-03T10:03:36Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="612550" started-at="2019-09-26T07:29:42Z" finished-at="2019-09-26T07:39:55Z">
-      <class name="com.tdm.qa.testcases.SavedQueryPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tdm.qa.testcases.SavedQueryPageTest@3cb5cdba]" name="setUp" is-config="true" duration-ms="62890" started-at="2019-09-26T12:59:42Z" finished-at="2019-09-26T13:00:45Z">
+    <test name="Default test" duration-ms="88913" started-at="2019-10-03T10:02:07Z" finished-at="2019-10-03T10:03:36Z">
+      <class name="com.tdm.qa.testcases.NearMePageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tdm.qa.testcases.NearMePageTest@3cb5cdba]" name="setUp" is-config="true" duration-ms="58998" started-at="2019-10-03T15:32:07Z" finished-at="2019-10-03T15:33:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifySavedQueryPage()[pri:1, instance:com.tdm.qa.testcases.SavedQueryPageTest@3cb5cdba]" name="verifySavedQueryPage" duration-ms="400" started-at="2019-09-26T13:00:45Z" finished-at="2019-09-26T13:00:46Z">
+        <test-method status="PASS" signature="validateNavigationOption()[pri:1, instance:com.tdm.qa.testcases.NearMePageTest@3cb5cdba]" name="validateNavigationOption" duration-ms="27763" started-at="2019-10-03T15:33:06Z" finished-at="2019-10-03T15:33:33Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifySavedQueryPage -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tdm.qa.testcases.SavedQueryPageTest@3cb5cdba]" name="tearDown" is-config="true" duration-ms="1876" started-at="2019-09-26T13:00:46Z" finished-at="2019-09-26T13:00:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tdm.qa.testcases.SavedQueryPageTest@3cb5cdba]" name="setUp" is-config="true" duration-ms="60508" started-at="2019-09-26T13:00:47Z" finished-at="2019-09-26T13:01:48Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyApplySearch()[pri:2, instance:com.tdm.qa.testcases.SavedQueryPageTest@3cb5cdba]" name="verifyApplySearch" duration-ms="24013" started-at="2019-09-26T13:01:48Z" finished-at="2019-09-26T13:02:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyApplySearch -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tdm.qa.testcases.SavedQueryPageTest@3cb5cdba]" name="tearDown" is-config="true" duration-ms="1996" started-at="2019-09-26T13:02:12Z" finished-at="2019-09-26T13:02:14Z">
+        </test-method> <!-- validateNavigationOption -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tdm.qa.testcases.NearMePageTest@3cb5cdba]" name="tearDown" is-config="true" duration-ms="2113" started-at="2019-10-03T15:33:33Z" finished-at="2019-10-03T15:33:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tdm.qa.testcases.SavedQueryPageTest@3cb5cdba]" name="setUp" is-config="true" duration-ms="69613" started-at="2019-09-26T13:02:14Z" finished-at="2019-09-26T13:03:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="saveAsQuery()[pri:3, instance:com.tdm.qa.testcases.SavedQueryPageTest@3cb5cdba]" name="saveAsQuery" duration-ms="88514" started-at="2019-09-26T13:03:24Z" finished-at="2019-09-26T13:04:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- saveAsQuery -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tdm.qa.testcases.SavedQueryPageTest@3cb5cdba]" name="tearDown" is-config="true" duration-ms="2016" started-at="2019-09-26T13:04:52Z" finished-at="2019-09-26T13:04:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tdm.qa.testcases.SavedQueryPageTest@3cb5cdba]" name="setUp" is-config="true" duration-ms="61754" started-at="2019-09-26T13:04:54Z" finished-at="2019-09-26T13:05:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="saveQuery()[pri:4, instance:com.tdm.qa.testcases.SavedQueryPageTest@3cb5cdba]" name="saveQuery" duration-ms="52297" started-at="2019-09-26T13:05:56Z" finished-at="2019-09-26T13:06:48Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- saveQuery -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tdm.qa.testcases.SavedQueryPageTest@3cb5cdba]" name="tearDown" is-config="true" duration-ms="1906" started-at="2019-09-26T13:06:48Z" finished-at="2019-09-26T13:06:50Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tdm.qa.testcases.SavedQueryPageTest@3cb5cdba]" name="setUp" is-config="true" duration-ms="61157" started-at="2019-09-26T13:06:50Z" finished-at="2019-09-26T13:07:51Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="clickOnReset()[pri:5, instance:com.tdm.qa.testcases.SavedQueryPageTest@3cb5cdba]" name="clickOnReset" duration-ms="36653" started-at="2019-09-26T13:07:51Z" finished-at="2019-09-26T13:08:28Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clickOnReset -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tdm.qa.testcases.SavedQueryPageTest@3cb5cdba]" name="tearDown" is-config="true" duration-ms="1969" started-at="2019-09-26T13:08:28Z" finished-at="2019-09-26T13:08:30Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tdm.qa.testcases.SavedQueryPageTest@3cb5cdba]" name="setUp" is-config="true" duration-ms="71836" started-at="2019-09-26T13:08:30Z" finished-at="2019-09-26T13:09:42Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="deleteQuery()[pri:6, instance:com.tdm.qa.testcases.SavedQueryPageTest@3cb5cdba]" name="deleteQuery" duration-ms="11331" started-at="2019-09-26T13:09:42Z" finished-at="2019-09-26T13:09:53Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteQuery -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tdm.qa.testcases.SavedQueryPageTest@3cb5cdba]" name="tearDown" is-config="true" duration-ms="1775" started-at="2019-09-26T13:09:53Z" finished-at="2019-09-26T13:09:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.tdm.qa.testcases.SavedQueryPageTest -->
+      </class> <!-- com.tdm.qa.testcases.NearMePageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

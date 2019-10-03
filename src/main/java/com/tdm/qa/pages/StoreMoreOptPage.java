@@ -32,7 +32,7 @@ public class StoreMoreOptPage extends BaseClass{
 		
 		try {
 			addNotif.click();
-			Thread.sleep(5000);
+			Thread.sleep(20000);
 		} catch (InterruptedException e) {
 			
 			e.printStackTrace();

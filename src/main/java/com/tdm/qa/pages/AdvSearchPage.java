@@ -16,9 +16,6 @@ import io.appium.java_client.MobileElement;
 
 public class AdvSearchPage extends BaseClass {
 	
-	
-	
-
 	@FindBy(xpath="//android.widget.TextView[@text='Advanced Search']")
 	WebElement advSearchScreen;
 	
@@ -79,28 +76,7 @@ public class AdvSearchPage extends BaseClass {
     return	advSearchScreen.isDisplayed();
     }
 
-    public List<MobileElement> getElement(String QueryN){
-    	System.out.println("field name: "+QueryN);
-		return driver.findElements(By.xpath("//*[@text='"+prop.getProperty(QueryN)+"']"));
-	}
-	
-	public void scrollTillElem(String QueryN) throws Exception {
-	
-		while(getElement(QueryN).size()==0) {
-			TestUtil.scrollDown();
-				
-	}
-		if(getElement(QueryN).size()>0) {
-			getElement(QueryN).get(0).click();
-			
-		}
-		
-	Thread.sleep(4000);
-	
-	
-	}
-	
-	
+    	
 	public void deleteQuery(String delQuery) {
 		driver.findElement(By.xpath("//*[@text='"+prop.getProperty(delQuery)+"']")).click();
 		yes.click();
@@ -140,8 +116,7 @@ public class AdvSearchPage extends BaseClass {
 	public void selectOperator(String field, String op, String val, String mon, String date) throws Exception {
 		
 			
-		driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().text(\""+prop.getProperty(field)+"\").instance(0))");
-   
+		TestUtil.scrollUpAndDown(field);
 					
 		String defaultOper= driver.findElement(By.xpath("//*[@text='"+prop.getProperty(field)+"']//following::android.widget.TextView")).getText();
 		System.out.println("op: "+defaultOper);
@@ -152,13 +127,12 @@ public class AdvSearchPage extends BaseClass {
 				driver.findElement(By.xpath("//*[@text='"+prop.getProperty(field)+"']//following::android.view.ViewGroup[@index='2']")).click();
 				driver.findElement(By.xpath("//*[@text='"+prop.getProperty(op)+"']")).click();
 				selOper.click();
-			driver.findElement(By.xpath("//*[@text='"+prop.getProperty(field)+"']//following::android.widget.EditText")).sendKeys(prop.getProperty(val));
-			 driver.findElement(By.xpath("//*[@text='"+prop.getProperty(field)+"']")).click();
+			    driver.findElement(By.xpath("//*[@text='"+prop.getProperty(field)+"']//following::android.widget.EditText")).sendKeys(prop.getProperty(val));
+			    driver.findElement(By.xpath("//*[@text='"+prop.getProperty(field)+"']")).click();
 		}
 		 
 			else if(defaultOper.contentEquals("is included in ")) {
-			 System.out.println("is included in condition");
-				driver.findElement(By.xpath("//*[@text='"+prop.getProperty(field)+"']//following::android.view.ViewGroup[@index='2']")).click();
+			 	driver.findElement(By.xpath("//*[@text='"+prop.getProperty(field)+"']//following::android.view.ViewGroup[@index='2']")).click();
 				driver.findElement(By.xpath("//*[@text='"+prop.getProperty(op)+"']")).click();
 				selOper.click();
 				Thread.sleep(2000);
@@ -220,8 +194,7 @@ else if(defaultOper.contentEquals("equals")) {
 			selOper.click();
 			driver.findElement(By.xpath("//*[@text='"+prop.getProperty(field)+"']//following::android.view.ViewGroup[@index='5']")).sendKeys(prop.getProperty(val));
 			 driver.findElement(By.xpath("//*[@text='"+prop.getProperty(field)+"']")).click();
-			
-			 
+
 }
 			
 	}

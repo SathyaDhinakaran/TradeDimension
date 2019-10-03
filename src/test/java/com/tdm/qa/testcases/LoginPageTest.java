@@ -28,9 +28,7 @@ public class LoginPageTest extends BaseClass {
 	@Test
 	public void loginTest() throws Exception 
 	{
-		//loginpage.login("username", "password")	;
 		homepage= loginpage.login("username", "password");
-
 		Assert.assertTrue(homepage.verifyNearMeLabel());
 
 	}

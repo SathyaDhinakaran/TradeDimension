@@ -42,7 +42,7 @@ public class MissingStorePageTest extends BaseClass{
 	public void enterMissigStoreDetails() {
 		missingstorepage.enterShopDetails("shopName", "streetName", "city", "outletType", "missingStoreComm", "addField", "CorrValue");
 		
-		Assert.assertTrue(notificationspage.verifyNotifiScreen());
+		Assert.assertTrue(missingstorepage.VerifyMissingStoreN("shopName"));
 	}
 	
 	@AfterMethod

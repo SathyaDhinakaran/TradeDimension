@@ -44,8 +44,6 @@ public void setUp() throws Exception {
 }
 
 
-
-
 @Test
 public void addNotification() throws Exception {
 	addnotifpage.clickOnShopNameEdit("addNotiShopName","addNotiComm","addNotiAddField");

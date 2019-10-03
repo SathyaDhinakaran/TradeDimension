@@ -69,6 +69,7 @@ public class AddNotifPage extends BaseClass {
 			clickOutside.click();
 			Thread.sleep(2000);
 			addFields.click();
+			Thread.sleep(5000);
 			searchtxt.click();
 			searchtxt.sendKeys(prop.getProperty(field));
 			driver.findElement(By.xpath("//android.widget.TextView[@text='"+prop.getProperty(field)+"']")).click();
@@ -81,24 +82,9 @@ public class AddNotifPage extends BaseClass {
 		}
 	
 	
-	
-			public List<MobileElement> getElement(String field){
-				return driver.findElements(By.xpath("//*[@text='"+prop.getProperty(field)+"']"));
-			}
-			
-			public void scrollTillElem(String field) throws Exception {
-			
-				while(getElement(field).size()==0) {
-					TestUtil.scrollDown();
-						
-			}
-				if(getElement(field).size()>0) {
-					getElement(field).get(0).click();
-				}
-			Thread.sleep(4000);
-			
-			
-			}
+	public void scrollTillElem(String field) {
+		TestUtil.scrollUpAndDown(field);
+	}
 			
 			public void enterVal(String field, String FieldVal) {
 				

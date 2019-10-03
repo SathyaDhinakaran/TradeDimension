@@ -54,6 +54,9 @@ public class MissingStorePage extends BaseClass{
 	@FindBy(xpath="//*[@text='Yes']")
 	WebElement yes;
 	
+	@FindBy(xpath="//*[@text='Comment :']")
+	WebElement commentClick;
+	
 	public MissingStorePage() {
 		PageFactory.initElements(driver, this);
 	}
@@ -61,6 +64,7 @@ public class MissingStorePage extends BaseClass{
 	public void enterShopDetails(String shopN,String StreetN, String cityN, String val1, String comm, String fieldN, String val2) {
 				
 		try {
+			shopName.click();
 			shopName.sendKeys(prop.getProperty(shopN));
 			clickOutside.click();
 			streetName.click();
@@ -78,7 +82,7 @@ public class MissingStorePage extends BaseClass{
 		    driver.findElement(By.xpath("//android.widget.TextView[@text='"+prop.getProperty(val1)+"']")).click();
 		    selectValue.click();
 		    comments.sendKeys(prop.getProperty(comm));
-		    clickOutside.click();
+		    commentClick.click();
 		    geoCode.click();
 		    yes.click();
 		    clickOutside.click();
@@ -92,13 +96,21 @@ public class MissingStorePage extends BaseClass{
 		    Thread.sleep(2000);
 		    driver.findElement(By.xpath("//*[@text='"+prop.getProperty(fieldN)+"']//following::android.widget.EditText")).sendKeys(prop.getProperty(val2));
 		    saveOpt.click();
-		    Thread.sleep(5000);
+		    Thread.sleep(10000);
 			
 		} catch (InterruptedException e) {
 			
 			e.printStackTrace();
 		}
 		
+				
 	}
 
+	public boolean VerifyMissingStoreN(String shopN) {
+		
+		return driver.findElement(By.xpath("//*[@text='"+prop.getProperty(shopN)+"']")).isDisplayed();
+	}
+	
+	
+	
 }
