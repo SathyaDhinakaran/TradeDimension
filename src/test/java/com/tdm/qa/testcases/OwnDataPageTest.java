@@ -49,12 +49,12 @@ public class OwnDataPageTest extends BaseClass{
 		}
 	
 	@Test
-	public void fillOwnData() {
+	public void fillOwnData() throws Exception {
 		owndatapage.enterStorePrio("storePrio");
 		owndatapage.selectOrderOnli();	
-		owndatapage.clickOnCurrentDate("date", "month");
+		owndatapage.clickOnCurrentDate("date", "month", "year");
 		owndatapage.clickOnSave();
-		Assert.assertTrue(owndatapage.verifyOwnData());
+		Assert.assertTrue(owndatapage.verifyOwnData("storePrio"));
 	}
 	
 	@AfterMethod

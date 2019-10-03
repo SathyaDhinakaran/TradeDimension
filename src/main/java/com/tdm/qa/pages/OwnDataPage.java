@@ -8,6 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.tdm.qa.base.BaseClass;
+import com.tdm.qa.util.TestUtil;
 
 public class OwnDataPage extends BaseClass{
 	@FindBy(xpath="//*[@text='Store Priority']//following::android.widget.EditText")
@@ -67,34 +68,7 @@ public void selectOrderOnli() {
 
 
 //This method supports current and future date not previous date
-/*public void clickOnCurrentDate(String date, String mon) {
-	
-	dolVisit.click();
-	
-	while(true) {
-		
-		WebElement monthYear=driver.findElement(By.id("parentPanel"));
-		monthYear.findElement(By.id("next")).click();
-		driver.findElement(By.xpath("//*[@text='1']")).click();
-		if(monthYear.findElement(By.id("date_picker_header_date")).getText().contains(prop.getProperty(mon)))
-			break;
-	}
-	
-	WebElement fullMonth=driver.findElement(By.id("month_view"));
-	List<WebElement> lst=fullMonth.findElements(By.className("android.view.View"));
-	for(WebElement we:lst)
-	{
-		if(we.getText().contentEquals(prop.getProperty(date))) {
-			we.click();
-			break;
-		}
-	}
-	
-driver.findElement(By.xpath("//*[@text='OK']")).click();
-}
-*/
-
-public void clickOnCurrentDate(String date, String mon) {
+public void clickOnCurrentDate(String date, String mon, String year) throws Exception {
 	
 	if(dolVisit.getText().isEmpty()) {
 		dolVisit.click();
@@ -103,13 +77,28 @@ public void clickOnCurrentDate(String date, String mon) {
 	else {
 	
 		dolVisit.click();
+		
+		
+		
+		String actual=driver.findElement(By.id("android:id/date_picker_header_year")).getText();
+		String expected=prop.getProperty(year);
+		
+		if(!actual.contentEquals(expected)) {
+			driver.findElement(By.id("date_picker_header_year")).click();
+			Thread.sleep(2000);
+			TestUtil.scrollUpAndDownWithClick(year);
+			
+		}
+		
+		
 	while(true) {
 		
 		WebElement monthYear=driver.findElement(By.id("parentPanel"));
-		monthYear.findElement(By.id("next")).click();
 		driver.findElement(By.xpath("//*[@text='1']")).click();
-		if(monthYear.findElement(By.id("date_picker_header_date")).getText().contains(prop.getProperty(mon)))
-			break;
+		
+		if(monthYear.findElement(By.id("date_picker_header_date")).getText().contains(prop.getProperty(mon))) {
+			break;}
+		monthYear.findElement(By.id("next")).click();
 	}
 	
 	WebElement fullMonth=driver.findElement(By.id("month_view"));
@@ -137,7 +126,9 @@ public void clickOnSave() {
 	}
 }
 
-public boolean verifyOwnData() {
-	return clickOutside.isDisplayed();
+public boolean verifyOwnData(String storePriority) {
+	TestUtil.scrollUpAndDown(storePriority);
+	return driver.findElement(By.xpath("//*[@text='"+prop.getProperty(storePriority)+"']")).isDisplayed();
+	
 }
 }

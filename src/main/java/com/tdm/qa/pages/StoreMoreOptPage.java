@@ -63,10 +63,7 @@ public OwnDataPage clickOnOwnData() {
 	return new OwnDataPage();
 }
 
-public NotifHistoryPage clickOnNotifHistory() {
-	notifHistory.click();
-	return new NotifHistoryPage();
-}
+
 
 public CheckInHistoryPage clickOnCheckInHist() {
 	

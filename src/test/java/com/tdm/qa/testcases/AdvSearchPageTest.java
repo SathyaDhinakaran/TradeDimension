@@ -44,11 +44,11 @@ public class AdvSearchPageTest extends BaseClass{
 		
 		advsearchpage.saveSelectedField();
 		
-		advsearchpage.selectOperator("advField1", "opString", "field1Val", null, null);
-		advsearchpage.selectOperator("advField5","opInt","field5Val", null, null);
-		advsearchpage.selectOperator("advField4","opPicker","field4Val", null, null);
-		advsearchpage.selectOperator("advField3","opDate",null,"field3ValMon", "field3ValDate");
-		advsearchpage.selectOperator("advField2", "opBoolean", null, null, null);
+		advsearchpage.selectOperator("advField1", "opString", "field1Val", null, null, null);
+		advsearchpage.selectOperator("advField5","opInt","field5Val", null, null, null);
+		advsearchpage.selectOperator("advField4","opPicker","field4Val", null, null, null);
+		advsearchpage.selectOperator("advField3","opDate",null,"field3ValMon", "field3ValDate", "year");
+		advsearchpage.selectOperator("advField2", "opBoolean", null, null, null, null);
 		
 
 	}

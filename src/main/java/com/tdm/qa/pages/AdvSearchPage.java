@@ -113,7 +113,7 @@ public class AdvSearchPage extends BaseClass {
 						
 	}
 	
-	public void selectOperator(String field, String op, String val, String mon, String date) throws Exception {
+	public void selectOperator(String field, String op, String val, String mon, String date, String year) throws Exception {
 		
 			
 		TestUtil.scrollUpAndDown(field);
@@ -162,6 +162,17 @@ public class AdvSearchPage extends BaseClass {
 			driver.findElement(By.xpath("//*[@text='"+prop.getProperty(op)+"']")).click();
 			selOper.click();
 			driver.findElement(By.xpath("//*[@text='"+prop.getProperty(field)+"']//following::android.view.ViewGroup[@index='5']")).click();
+			
+			String actual=driver.findElement(By.id("android:id/date_picker_header_year")).getText();
+			String expected=prop.getProperty(year);
+			
+			if(!actual.contentEquals(expected)) {
+				driver.findElement(By.id("date_picker_header_year")).click();
+				Thread.sleep(2000);
+				TestUtil.scrollUpAndDownWithClick(year);
+				
+			}
+			
 			while(true) {
 				
 				WebElement monthYear=driver.findElement(By.id("parentPanel"));
