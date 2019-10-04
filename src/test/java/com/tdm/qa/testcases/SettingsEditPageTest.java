@@ -45,7 +45,7 @@ public class SettingsEditPageTest extends BaseClass {
 		settingspage.clickOnEdit();
 	}
 	
-	@Test(priority=1)
+/*	@Test(priority=1)
 	public void assignIcon() {
 		settingseditpage.setIcon("corresFieldValue1");
 		settingseditpage.toSetGreenIcon();
@@ -55,9 +55,8 @@ public class SettingsEditPageTest extends BaseClass {
 		
 		settingseditpage.clickOnSave();
 		Assert.assertTrue(moreoptionpage.verifySettingsPage());
-		
 			
-	}
+	}*/
 	
 	@Test(priority=2)
 	

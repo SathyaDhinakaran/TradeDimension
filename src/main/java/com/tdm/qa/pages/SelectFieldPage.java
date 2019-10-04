@@ -28,10 +28,8 @@ public class SelectFieldPage extends BaseClass {
 	}
 
 	public void selectField(String field) throws Exception {
-		 searchTxt.sendKeys(prop.getProperty(field));
-		//clickOnfield.click();
-		 
-		 driver.findElement(By.xpath("//android.widget.TextView[@text='"+prop.getProperty(field)+"']")).click();
+		searchTxt.sendKeys(prop.getProperty(field));
+		driver.findElement(By.xpath("//android.widget.TextView[@text='"+prop.getProperty(field)+"']")).click();
 		Thread.sleep(2000);
 		saveBtn.click();
 		Thread.sleep(5000);

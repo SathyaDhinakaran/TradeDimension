@@ -37,7 +37,7 @@ public class SavedQueryPageTest extends BaseClass{
 		savedquerypage=homepage.clickOnSavedQuery();
 		
 	}
-	/*@Test(priority=1)
+	@Test(priority=1)
 	public void verifySavedQueryPage() {
 	
 		Assert.assertTrue(savedquerypage.verifySavedQueryPage());
@@ -88,7 +88,7 @@ public class SavedQueryPageTest extends BaseClass{
 		}
 		
 	}
-	*/
+	
 	
 	@Test(priority=5)
 	public void clickOnReset(){
@@ -99,13 +99,13 @@ public class SavedQueryPageTest extends BaseClass{
 	
 	}
 	
-	/*
+	
 	@Test(priority=6)
 	public void deleteQuery() {
 		savedquerypage.deleteQuery("saveAsName");
 		
 		Assert.assertEquals(0, savedquerypage.veifyDeletedQry("saveAsName"));
-	}*/
+	}
 	
 	@AfterMethod
 	public void tearDown() {

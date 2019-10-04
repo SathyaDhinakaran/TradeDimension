@@ -37,14 +37,8 @@ public class SettingsPageTest extends BaseClass {
 		moreoptionpage.clickOnSettings();
 		
 	}
-	/*@Test(priority=1)
-	public void setCountry() throws Exception {
-		settingspage.clickOnPicker();
-		settingspage.selectCountry("country");
-	}*/
-	
-	
-	@Test(priority=2)
+		
+	@Test(priority=1)
     public void resetLegend() throws Exception {
 		settingspage.goToSelectFields();
 		selectfieldpage.selectField("setLegendField");

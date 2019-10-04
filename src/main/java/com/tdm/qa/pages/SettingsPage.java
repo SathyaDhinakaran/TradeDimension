@@ -65,7 +65,7 @@ public class SettingsPage extends BaseClass{
 		
 		try {
 			edit.click();
-			Thread.sleep(10000);
+			Thread.sleep(20000);
 		} catch (Exception e) {
 			
 			e.printStackTrace();
@@ -82,34 +82,5 @@ public class SettingsPage extends BaseClass{
 			return false;
 	}
 	
-	/*public SettingsPage clickOnPicker() {
 		
-		
-		try {
-			clickCountryPicker.click();
-			Thread.sleep(2000);
-			
-		} catch (InterruptedException e) {
-			
-			e.printStackTrace();
-		}
-		return new SettingsPage();
-		
-	}
-	
-	public boolean verifyCountryPicker() {
-		return counPicker.isDisplayed();
-	}
-	
-	public void selectCountry(String country) throws Exception {
-		
-		List<MobileElement>lst=driver.findElements(By.className("android.widget.EditText"));
-		
-		lst.get(2).click();
-		Thread.sleep(2000); 
-		//driver.findElement(By.xpath("//*[@text='"+prop.getProperty(country)+"']")).click();
-		
-	}*/
-
-	
 }

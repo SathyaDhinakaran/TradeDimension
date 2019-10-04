@@ -78,16 +78,13 @@ public class SavedQueryPage extends BaseClass{
 		
 		TestUtil.scrollUpAndDown(qryName);
 		return driver.findElement(By.xpath("//*[@text='"+prop.getProperty(qryName)+"']")).isDisplayed();
-		//return driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().text(\""+prop.getProperty(qryName)+"\").instance(0))").isDisplayed();
-		   
+		  
 	}
 	
 	public void editQuery(String queryN) {
 			try {
 				
 				TestUtil.scrollUpAndDownWithClick(queryN);
-				//driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().text(\""+prop.getProperty(queryN)+"\").instance(0))").click();
-				
 				Thread.sleep(5000);
 			} catch (InterruptedException e) {
 				
@@ -125,10 +122,8 @@ public class SavedQueryPage extends BaseClass{
 			addField.click();
 			Thread.sleep(2000);
 			TestUtil.scrollUpAndDownWithClick(addFieldN);
-			//driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().text(\""+prop.getProperty(addFieldN)+"\").instance(0))").click();
 			saveField.click(); 
 			TestUtil.scrollUpAndDown(addFieldN);
-			//driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().text(\""+prop.getProperty(addFieldN)+"\").instance(0))");
 			driver.findElement(By.xpath("//*[@text='"+prop.getProperty(addFieldN)+"']//following::android.view.ViewGroup[@index='2']")).click();
 			driver.findElement(By.xpath("//*[@text='"+prop.getProperty(op)+"']")).click();
 			selOper.click();
@@ -174,7 +169,6 @@ public class SavedQueryPage extends BaseClass{
 		try {
 			
 			TestUtil.scrollUpAndDown(fieldN);
-			//driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().text(\""+prop.getProperty(fieldN)+"\").instance(0))");
 			driver.findElement(By.xpath("//*[@text='"+prop.getProperty(fieldN)+"']//following::android.view.ViewGroup[@index='2']")).click();
 			driver.findElement(By.xpath("//*[@text='"+prop.getProperty(op)+"']")).click();
 			selOper.click();
@@ -217,7 +211,6 @@ public class SavedQueryPage extends BaseClass{
 		
 		try {
 			TestUtil.scrollUpAndDown(qryN);
-			//driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().text(\""+prop.getProperty(qryN)+"\").instance(0))");
 			driver.findElement(By.xpath("//*[@text='"+prop.getProperty(qryN)+"']//following::android.view.ViewGroup[@index='2']")).click();
 			yes.click();
 			Thread.sleep(2000);
@@ -239,14 +232,11 @@ public class SavedQueryPage extends BaseClass{
 		try {
 			editBtn.click();
 			TestUtil.scrollUpAndDown(field);
-			//driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().text(\""+prop.getProperty(field)+"\").instance(0))");
 			driver.findElement(By.xpath("//*[@text='"+prop.getProperty(field)+"']//following::android.view.ViewGroup[@index='4']")).click();
 			addField.click();
 			Thread.sleep(2000);
 			TestUtil.scrollUpAndDown(field);
 			driver.findElement(By.xpath("//*[@text='"+prop.getProperty(field)+"']")).isDisplayed();
-			//driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().text(\""+prop.getProperty(field)+"\").instance(0))").isDisplayed();
-			
 			Thread.sleep(2000);
 			addFieldBackBtn.click();
 			savedQryScreen.click();
@@ -254,7 +244,7 @@ public class SavedQueryPage extends BaseClass{
 			yes.click();
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 		
@@ -268,15 +258,14 @@ public class SavedQueryPage extends BaseClass{
 			savedQryScreen.click();
 			editBtn.click();
 			Thread.sleep(2000);
-			TestUtil.scrollUpAndDown(field);
-			
-			//return driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().text(\""+prop.getProperty(field)+"\").instance(0))").isDisplayed();
-			
+					
 		} catch (InterruptedException e) {
 			
 			e.printStackTrace();
 		}
-		return driver.findElement(By.xpath("//*[text='"+prop.getProperty(field)+"']")).isDisplayed();
+		TestUtil.scrollUpAndDown(field);
+		return driver.findElement(By.xpath("//*[@text='"+prop.getProperty(field)+"']")).isDisplayed();
+		
 	}
 }
 

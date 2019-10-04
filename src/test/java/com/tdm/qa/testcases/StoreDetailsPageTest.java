@@ -44,11 +44,7 @@ public class StoreDetailsPageTest extends BaseClass{
 		Assert.assertTrue(storedetailspage.verifyHierarchyPage());
 	}
 	
-	@Test(priority=2)
-	public void clickOnStoreMoreOpt() {
-		storedetailspage.clickOnMoreOpt();
-		Assert.assertTrue(storedetailspage.verifyMoreOpt());
-	}
+	
 	
 	@AfterMethod
 	public void tearDown() {
