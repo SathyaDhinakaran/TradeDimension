@@ -59,9 +59,7 @@ public class LoginPage extends BaseClass{
 		password.sendKeys(prop.getProperty(pswd));
 		clickOutside.click();
 		loginBtn.click();
-		Thread.sleep(20000);
-	
-		//driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD,TimeUnit.SECONDS); throws error as appium doesn't support timeout
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Near Me']")));
 		return new HomePage();
 	}
 	

@@ -1,8 +1,13 @@
 package com.tdm.qa.util;
 
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 
 import com.tdm.qa.base.BaseClass;
 
@@ -29,7 +34,18 @@ public class TestUtil extends BaseClass {
 	
 	public static void scrollUpAndDownWithClick(String text) {
 		
-		driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().text(\""+prop.getProperty(text)+"\").instance(0))").click();
-			
+		try {
+			driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().text(\""+prop.getProperty(text)+"\").instance(0))").click();
+			Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				
+				e.printStackTrace();
+			}
 		}
+	
+	public static void takeScreenshotAtEndOfTest() throws IOException {
+		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		String currentDir = System.getProperty("user.dir");
+		FileUtils.copyFile(scrFile, new File(currentDir + "/screenshots/" + System.currentTimeMillis() + ".png"));
+	}
 }

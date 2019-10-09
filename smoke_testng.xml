@@ -2,6 +2,10 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="TDM Automation Suite" parallel="false">
 
+<listeners>
+<listener class-name="com.tdm.qa.ExtentReportListener.ExtentReporterNG"/>
+</listeners>
+
   <test name="TDM Automation">
     <classes>
       <class name="com.tdm.qa.testcases.LoginPageTest"/>
