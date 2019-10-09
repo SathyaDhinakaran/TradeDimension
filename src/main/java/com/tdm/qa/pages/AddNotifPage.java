@@ -66,8 +66,9 @@ public class AddNotifPage extends BaseClass {
 			clickOutside.click();
 			geoCode.click();
 			yes.click();
-			clickOutside.click();
 			Thread.sleep(2000);
+			//clickOutside.click();
+			driver.findElement(By.xpath("//*[@text='Comment:']")).click();
 			addFields.click();
 			Thread.sleep(5000);
 			searchtxt.click();

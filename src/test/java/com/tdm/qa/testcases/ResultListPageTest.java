@@ -44,22 +44,6 @@ public class ResultListPageTest extends BaseClass {
 		Assert.assertTrue(resultlistpage.verifyResultListPage());
 	}
 	
-	@Test(priority=2)
-	public void downloadOfflineData() throws Exception {
-		homepage.clickOnGoogleSearch();
-		homepage.enterGoogleSearchVal("googleSearchtxt");
-		Thread.sleep(5000);
-		homepage.clickOnMoreOption();
-		moreoptionpage.clickOnResultList();
-		Thread.sleep(2000);
-		resultlistpage.clickOnDownload("downloadName");
-		Thread.sleep(2000);
-		resultlistpage.clickOnMap();	
-		homepage.clickOnMoreOption();
-		moreoptionpage.clickOnOfflineData();
-	Assert.assertTrue(offlinedatapage.verifyDownloadedData("downloadName"));	
-		
-	}
 	
 	@AfterMethod
 	public void tearDown() {

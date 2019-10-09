@@ -3,11 +3,170 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [TDM Automation Suite]">
   <listeners>
     <listener class-name="com.tdm.qa.ExtentReportListener.ExtentReporterNG"/>
+    <listener class-name="Analyzer.MyTransformer"/>
   </listeners>
   <test name="TDM Automation">
     <classes>
+      <class name="com.tdm.qa.testcases.AdvSearchPageTest"/>
+      <class name="com.tdm.qa.testcases.HierarchiesPageTest"/>
+      <class name="com.tdm.qa.testcases.OfflineDataPageTest"/>
       <class name="com.tdm.qa.testcases.LoginPageTest"/>
       <class name="com.tdm.qa.testcases.HomePageTest"/>
+      <class name="com.tdm.qa.testcases.NearMePageTest"/>
+      <class name="com.tdm.qa.testcases.PrevCheckinPageTest"/>
+      <class name="com.tdm.qa.testcases.SettingsPageTest"/>
+      <class name="com.tdm.qa.testcases.SettingsEditPageTest"/>
+      <class name="com.tdm.qa.testcases.MoreOptionPageTest"/>
+      <class name="com.tdm.qa.testcases.NotificationsPageTest"/>
+      <class name="com.tdm.qa.testcases.ResultListPageTest"/>
+      <class name="com.tdm.qa.testcases.SavedQueryPageTest"/>
+      <class name="com.tdm.qa.testcases.AboutPageTest"/>
+      <class name="com.tdm.qa.testcases.AddNotifPageTest"/>
+      <class name="com.tdm.qa.testcases.CheckInHistoryPageTest"/>
+      <class name="com.tdm.qa.testcases.CheckInPageTest"/>
+      <class name="com.tdm.qa.testcases.MissingStorePageTest"/>
+      <class name="com.tdm.qa.testcases.OwnDataPageTest"/>
+      <class name="com.tdm.qa.testcases.SelectFieldPageTest"/>
+      <class name="com.tdm.qa.testcases.SignOutPageTest"/>
+      <class name="com.tdm.qa.testcases.StoreDetailsPageTest"/>
     </classes>
   </test> <!-- TDM Automation -->
+  <test name="TDM Automation(failed)">
+    <classes>
+      <class name="com.tdm.qa.testcases.ResultListPageTest">
+        <methods>
+          <include name="SetUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.tdm.qa.testcases.ResultListPageTest -->
+      <class name="com.tdm.qa.testcases.SettingsPageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.tdm.qa.testcases.SettingsPageTest -->
+      <class name="com.tdm.qa.testcases.SignOutPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.tdm.qa.testcases.SignOutPageTest -->
+      <class name="com.tdm.qa.testcases.AddNotifPageTest">
+        <methods>
+          <include name="addNotification"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.tdm.qa.testcases.AddNotifPageTest -->
+      <class name="com.tdm.qa.testcases.HomePageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.tdm.qa.testcases.HomePageTest -->
+      <class name="com.tdm.qa.testcases.HierarchiesPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.tdm.qa.testcases.HierarchiesPageTest -->
+      <class name="com.tdm.qa.testcases.NearMePageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.tdm.qa.testcases.NearMePageTest -->
+      <class name="com.tdm.qa.testcases.SelectFieldPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.tdm.qa.testcases.SelectFieldPageTest -->
+      <class name="com.tdm.qa.testcases.AboutPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.tdm.qa.testcases.AboutPageTest -->
+      <class name="com.tdm.qa.testcases.OwnDataPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.tdm.qa.testcases.OwnDataPageTest -->
+      <class name="com.tdm.qa.testcases.MoreOptionPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.tdm.qa.testcases.MoreOptionPageTest -->
+      <class name="com.tdm.qa.testcases.CheckInHistoryPageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.tdm.qa.testcases.CheckInHistoryPageTest -->
+      <class name="com.tdm.qa.testcases.PrevCheckinPageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.tdm.qa.testcases.PrevCheckinPageTest -->
+      <class name="com.tdm.qa.testcases.LoginPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.tdm.qa.testcases.LoginPageTest -->
+      <class name="com.tdm.qa.testcases.AdvSearchPageTest">
+        <methods>
+          <include name="resetQuery"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.tdm.qa.testcases.AdvSearchPageTest -->
+      <class name="com.tdm.qa.testcases.CheckInPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.tdm.qa.testcases.CheckInPageTest -->
+      <class name="com.tdm.qa.testcases.OfflineDataPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.tdm.qa.testcases.OfflineDataPageTest -->
+      <class name="com.tdm.qa.testcases.StoreDetailsPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.tdm.qa.testcases.StoreDetailsPageTest -->
+      <class name="com.tdm.qa.testcases.SettingsEditPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.tdm.qa.testcases.SettingsEditPageTest -->
+      <class name="com.tdm.qa.testcases.NotificationsPageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.tdm.qa.testcases.NotificationsPageTest -->
+      <class name="com.tdm.qa.testcases.SavedQueryPageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.tdm.qa.testcases.SavedQueryPageTest -->
+      <class name="com.tdm.qa.testcases.MissingStorePageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.tdm.qa.testcases.MissingStorePageTest -->
+    </classes>
+  </test> <!-- TDM Automation(failed) -->
 </suite> <!-- Failed suite [TDM Automation Suite] -->
