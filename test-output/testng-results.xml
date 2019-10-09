@@ -2,12 +2,12 @@
 <testng-results skipped="1" failed="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="72531" started-at="2019-10-07T12:54:45Z" finished-at="2019-10-07T12:55:57Z">
+  <suite name="Default suite" duration-ms="73332" started-at="2019-10-09T05:18:14Z" finished-at="2019-10-09T05:19:28Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="72531" started-at="2019-10-07T12:54:45Z" finished-at="2019-10-07T12:55:57Z">
+    <test name="Default test" duration-ms="73332" started-at="2019-10-09T05:18:14Z" finished-at="2019-10-09T05:19:28Z">
       <class name="com.tdm.qa.testcases.AddNotifPageTest">
-        <test-method status="FAIL" signature="setUp()[pri:0, instance:com.tdm.qa.testcases.AddNotifPageTest@5d740a0f]" name="setUp" is-config="true" duration-ms="0" started-at="2019-10-07T18:24:45Z" finished-at="2019-10-07T18:24:45Z">
+        <test-method status="FAIL" signature="setUp()[pri:0, instance:com.tdm.qa.testcases.AddNotifPageTest@6a5fc7f7]" name="setUp" is-config="true" duration-ms="0" started-at="2019-10-09T10:48:14Z" finished-at="2019-10-09T10:48:14Z">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[An element could not be located on the page using the given search parameters.
@@ -16,7 +16,7 @@ Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17
 System info: host: 'INLF6DLLH2', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_151'
 Driver info: io.appium.java_client.android.AndroidDriver
 Capabilities {app: C:\Users\dhsa7001\eclipse-w..., appActivity: md54e9aad3514586715abecb6fd..., appPackage: com.nielsen.TDMobileX, autoGrantPermissions: true, databaseEnabled: false, desired: {app: C:\Users\dhsa7001\eclipse-w..., appActivity: md54e9aad3514586715abecb6fd..., appPackage: com.nielsen.TDMobileX, autoGrantPermissions: true, deviceName: mydevice, platformName: android}, deviceManufacturer: samsung, deviceModel: SM-N950F, deviceName: 988a9b31423738305930, deviceScreenSize: 1440x2960, deviceUDID: 988a9b31423738305930, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, platform: LINUX, platformName: Android, platformVersion: 9, takesScreenshot: true, warnings: {}, webStorageEnabled: false}
-Session ID: c2f6cd16-d0a6-4a93-9fd1-274bc653ff59
+Session ID: d9e330f8-ce2b-4f53-b753-b9a77d4b05c1
 *** Element info: {Using=xpath, value=//android.view.View[contains(@content-desc,'_photograph.jpeg')]}]]>
             </message>
             <full-stacktrace>
@@ -26,7 +26,7 @@ Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17
 System info: host: 'INLF6DLLH2', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_151'
 Driver info: io.appium.java_client.android.AndroidDriver
 Capabilities {app: C:\Users\dhsa7001\eclipse-w..., appActivity: md54e9aad3514586715abecb6fd..., appPackage: com.nielsen.TDMobileX, autoGrantPermissions: true, databaseEnabled: false, desired: {app: C:\Users\dhsa7001\eclipse-w..., appActivity: md54e9aad3514586715abecb6fd..., appPackage: com.nielsen.TDMobileX, autoGrantPermissions: true, deviceName: mydevice, platformName: android}, deviceManufacturer: samsung, deviceModel: SM-N950F, deviceName: 988a9b31423738305930, deviceScreenSize: 1440x2960, deviceUDID: 988a9b31423738305930, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, platform: LINUX, platformName: Android, platformVersion: 9, takesScreenshot: true, warnings: {}, webStorageEnabled: false}
-Session ID: c2f6cd16-d0a6-4a93-9fd1-274bc653ff59
+Session ID: d9e330f8-ce2b-4f53-b753-b9a77d4b05c1
 *** Element info: {Using=xpath, value=//android.view.View[contains(@content-desc,'_photograph.jpeg')]}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -91,11 +91,11 @@ Session ID: c2f6cd16-d0a6-4a93-9fd1-274bc653ff59
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="SKIP" signature="addNotification()[pri:0, instance:com.tdm.qa.testcases.AddNotifPageTest@5d740a0f]" name="addNotification" duration-ms="0" started-at="2019-10-07T18:25:57Z" finished-at="2019-10-07T18:25:57Z">
+        <test-method status="SKIP" signature="addNotification()[pri:0, instance:com.tdm.qa.testcases.AddNotifPageTest@6a5fc7f7]" name="addNotification" duration-ms="2" started-at="2019-10-09T10:49:28Z" finished-at="2019-10-09T10:49:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addNotification -->
-        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.tdm.qa.testcases.AddNotifPageTest@5d740a0f]" name="tearDown" is-config="true" duration-ms="0" started-at="2019-10-07T18:25:57Z" finished-at="2019-10-07T18:25:57Z">
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.tdm.qa.testcases.AddNotifPageTest@6a5fc7f7]" name="tearDown" is-config="true" duration-ms="0" started-at="2019-10-09T10:49:28Z" finished-at="2019-10-09T10:49:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
