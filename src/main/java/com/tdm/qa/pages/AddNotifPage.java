@@ -9,8 +9,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.touch.TouchActions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-
 import com.tdm.qa.base.BaseClass;
 import com.tdm.qa.util.TestUtil;
 
@@ -62,25 +60,22 @@ public class AddNotifPage extends BaseClass {
 					
 			shopName.clear();
 			shopName.sendKeys(prop.getProperty(shopN));
-			driver.findElement(By.xpath("//*[@text='Shop Name']")).click();
+			clickOutside.click();
 			comments.clear();
 			comments.sendKeys(prop.getProperty(comm));
-			driver.findElement(By.xpath("//*[@text='Comment :']")).click();
+			clickOutside.click();
 			geoCode.click();
 			yes.click();
-			driver.findElement(By.xpath("//*[@text='Check GeoCodes?']")).click();
-			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@text='Add Fields']")));
+			clickOutside.click();
+			Thread.sleep(2000);
 			addFields.click();
-			wait.until(ExpectedConditions.presenceOfElementLocated(By.id("search_src_text")));
-			
-			//Thread.sleep(5000);
+			Thread.sleep(5000);
 			searchtxt.click();
 			searchtxt.sendKeys(prop.getProperty(field));
 			driver.findElement(By.xpath("//android.widget.TextView[@text='"+prop.getProperty(field)+"']")).click();
 			saveField.click();
-			wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@tet='Aff Fields']")));
-			//Thread.sleep(4000);
-		} catch (Exception e) {
+			Thread.sleep(4000);
+		} catch (InterruptedException e) {
 			
 			e.printStackTrace();
 		}

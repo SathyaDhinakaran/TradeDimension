@@ -59,7 +59,8 @@ public class LoginPage extends BaseClass{
 		password.sendKeys(prop.getProperty(pswd));
 		clickOutside.click();
 		loginBtn.click();
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Near Me']")));
+		Thread.sleep(20000);
+		//wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Near Me']")));
 		return new HomePage();
 	}
 	
