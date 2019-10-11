@@ -75,7 +75,7 @@ public class HomePage extends BaseClass {
 	
 	public NearMePage clickOnNearMe() throws Exception {
 			 nearMe.click();
-			 Thread.sleep(20000);
+			 Thread.sleep(40000);
 			 return new NearMePage();
 		}
 	

@@ -64,7 +64,7 @@ public class AdvSearchPageTest extends BaseClass{
 		
 	
 	@Test(priority=2)
-	public void addField() {
+	public void applySearch() {
 				
 			advsearchpage.applySearch();
 			

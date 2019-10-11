@@ -55,7 +55,6 @@
         <methods>
           <include name="addNotification"/>
           <include name="setUp"/>
-          <include name="tearDown"/>
         </methods>
       </class> <!-- com.tdm.qa.testcases.AddNotifPageTest -->
       <class name="com.tdm.qa.testcases.HomePageTest">
@@ -91,7 +90,7 @@
       <class name="com.tdm.qa.testcases.OwnDataPageTest">
         <methods>
           <include name="setUp"/>
-          <include name="tearDown"/>
+          <include name="fillOwnData"/>
         </methods>
       </class> <!-- com.tdm.qa.testcases.OwnDataPageTest -->
       <class name="com.tdm.qa.testcases.MoreOptionPageTest">
@@ -102,7 +101,7 @@
       </class> <!-- com.tdm.qa.testcases.MoreOptionPageTest -->
       <class name="com.tdm.qa.testcases.CheckInHistoryPageTest">
         <methods>
-          <include name="tearDown"/>
+          <include name="verifyCheckInHist"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- com.tdm.qa.testcases.CheckInHistoryPageTest -->
@@ -121,14 +120,15 @@
       <class name="com.tdm.qa.testcases.AdvSearchPageTest">
         <methods>
           <include name="resetQuery"/>
-          <include name="tearDown"/>
+          <include name="addField"/>
           <include name="setUp"/>
+          <include name="saveQuery"/>
         </methods>
       </class> <!-- com.tdm.qa.testcases.AdvSearchPageTest -->
       <class name="com.tdm.qa.testcases.CheckInPageTest">
         <methods>
           <include name="setUp"/>
-          <include name="tearDown"/>
+          <include name="checkInComm"/>
         </methods>
       </class> <!-- com.tdm.qa.testcases.CheckInPageTest -->
       <class name="com.tdm.qa.testcases.OfflineDataPageTest">
@@ -146,7 +146,7 @@
       <class name="com.tdm.qa.testcases.SettingsEditPageTest">
         <methods>
           <include name="setUp"/>
-          <include name="tearDown"/>
+          <include name="selectReset"/>
         </methods>
       </class> <!-- com.tdm.qa.testcases.SettingsEditPageTest -->
       <class name="com.tdm.qa.testcases.NotificationsPageTest">

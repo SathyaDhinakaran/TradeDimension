@@ -11,7 +11,7 @@ public class StoreDetailsPage extends BaseClass{
 	@FindBy(xpath="//android.view.ViewGroup[@index='0']")
 	WebElement backBtn;
 	
-	@FindBy(xpath="//android.view.ViewGroup[@index=2]")
+	@FindBy(xpath="//android.view.ViewGroup[@index='2']")
 	WebElement hierarchy;
 	
 	@FindBy(xpath="//android.view.ViewGroup[@index='3']")

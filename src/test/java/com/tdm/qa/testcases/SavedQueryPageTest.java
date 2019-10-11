@@ -103,8 +103,9 @@ public class SavedQueryPageTest extends BaseClass{
 	@Test(priority=6)
 	public void deleteQuery() {
 		savedquerypage.deleteQuery("saveAsName");
-		
+		savedquerypage.deleteQuery("saveQueryName");
 		Assert.assertEquals(0, savedquerypage.veifyDeletedQry("saveAsName"));
+		Assert.assertEquals(0, savedquerypage.veifyDeletedQry("saveQueryName"));
 	}
 	
 	@AfterMethod

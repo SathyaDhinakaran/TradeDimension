@@ -50,6 +50,7 @@ public class BaseClass {
 			caps.setCapability("autoGrantPermissions",prop.getProperty("permissions"));
 			url =new URL(prop.getProperty("urls"));
 			driver=new AndroidDriver(url,caps);
+			driver.manage().deleteAllCookies();
 			wait=new WebDriverWait(driver,50);
 			Thread.sleep(3000);
 			

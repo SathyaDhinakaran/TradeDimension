@@ -52,35 +52,49 @@ public class AddNotifPage extends BaseClass {
 		PageFactory.initElements(driver, this);
 	}
 	
-	public void clickOnShopNameEdit(String shopN, String comm, String field) {
+	public void clickOnShopNameEdit(String shopN, String comm) {
 		
 		try {
 			shopNameEdit.click();
 			shopName.click();
-					
 			shopName.clear();
 			shopName.sendKeys(prop.getProperty(shopN));
 			clickOutside.click();
 			comments.clear();
 			comments.sendKeys(prop.getProperty(comm));
+			Thread.sleep(2000);
 			clickOutside.click();
+			
+			
 			geoCode.click();
 			yes.click();
-			Thread.sleep(2000);
-			//clickOutside.click();
-			driver.findElement(By.xpath("//*[@text='Comment:']")).click();
+			clickOutside.click();
+			
+		} catch (Exception e) {
+			
+			e.printStackTrace();
+		}
+		
+		
+		}
+	
+	public void addField(String field) {
+		
+		try {
 			addFields.click();
 			Thread.sleep(5000);
 			searchtxt.click();
 			searchtxt.sendKeys(prop.getProperty(field));
 			driver.findElement(By.xpath("//android.widget.TextView[@text='"+prop.getProperty(field)+"']")).click();
 			saveField.click();
-			Thread.sleep(4000);
+			Thread.sleep(4000);	
+			
 		} catch (InterruptedException e) {
 			
 			e.printStackTrace();
 		}
-		}
+		
+	}
 	
 	
 	public void scrollTillElem(String field) {
