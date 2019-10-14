@@ -7,11 +7,13 @@ import org.testng.annotations.Test;
 
 import com.tdm.qa.base.BaseClass;
 import com.tdm.qa.pages.AddNotifPage;
+import com.tdm.qa.pages.AdvSearchPage;
 import com.tdm.qa.pages.HomePage;
 import com.tdm.qa.pages.LoginPage;
 import com.tdm.qa.pages.NearMePage;
 import com.tdm.qa.pages.StoreDetailsPage;
 import com.tdm.qa.pages.StoreMoreOptPage;
+import com.tdm.qa.util.TestUtil;
 
 public class AddNotifPageTest extends BaseClass{
 	LoginPage loginpage;
@@ -20,6 +22,7 @@ public class AddNotifPageTest extends BaseClass{
 	StoreDetailsPage storedetailspage;
 	StoreMoreOptPage storemoreoptpage;
 	AddNotifPage addnotifpage;
+	AdvSearchPage advsearchpage ;
 	
 public AddNotifPageTest() {
 	super();
@@ -41,15 +44,22 @@ public void setUp() throws Exception {
 	storedetailspage.clickOnMoreOpt();
 	storemoreoptpage.clickOnAddNotif();
 	addnotifpage=new AddNotifPage();
+	advsearchpage=new AdvSearchPage();
 }
 
 
-@Test
+@Test(retryAnalyzer=Analyzer.RetryAnalyzer.class)
 public void addNotification() throws Exception {
+	
 	addnotifpage.clickOnShopNameEdit("addNotiShopName","addNotiComm");
-	addnotifpage.addField("addNotiAddField");
+	TestUtil.scrollUpAndDownWithClick("addNotiAddField");
+	advsearchpage.saveSelectedField();
+	
 	addnotifpage.scrollTillElem("addNotiAddField");
 	addnotifpage.enterVal("addNotiAddField", "addNotiFieldVal");
+	//addnotifpage.addGeoCode("addNotiAddField");
+	TestUtil.scrollUpAndDownWithClick("shopN");
+	addnotifpage.save();
 	storedetailspage.clickOnMoreOpt();
 	Assert.assertTrue(storemoreoptpage.verifyNotif("addNotiComm"));
 	

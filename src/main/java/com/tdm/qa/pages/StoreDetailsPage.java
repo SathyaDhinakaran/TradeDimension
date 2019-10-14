@@ -14,7 +14,7 @@ public class StoreDetailsPage extends BaseClass{
 	@FindBy(xpath="//android.view.ViewGroup[@index='2']")
 	WebElement hierarchy;
 	
-	@FindBy(xpath="//android.view.ViewGroup[@index='3']")
+	@FindBy(xpath="//android.view.ViewGroup[@index='0']/child::android.view.ViewGroup[@index='3']")
 	WebElement storeMoreOpt;
 	
 	@FindBy(xpath="//*[@text='Detailed Location' or @text='Hierarchies']")

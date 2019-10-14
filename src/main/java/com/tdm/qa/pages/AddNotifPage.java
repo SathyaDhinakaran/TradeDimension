@@ -64,11 +64,10 @@ public class AddNotifPage extends BaseClass {
 			comments.sendKeys(prop.getProperty(comm));
 			Thread.sleep(2000);
 			clickOutside.click();
+			addFields.click();
+			Thread.sleep(5000);
 			
 			
-			geoCode.click();
-			yes.click();
-			clickOutside.click();
 			
 		} catch (Exception e) {
 			
@@ -78,23 +77,6 @@ public class AddNotifPage extends BaseClass {
 		
 		}
 	
-	public void addField(String field) {
-		
-		try {
-			addFields.click();
-			Thread.sleep(5000);
-			searchtxt.click();
-			searchtxt.sendKeys(prop.getProperty(field));
-			driver.findElement(By.xpath("//android.widget.TextView[@text='"+prop.getProperty(field)+"']")).click();
-			saveField.click();
-			Thread.sleep(4000);	
-			
-		} catch (InterruptedException e) {
-			
-			e.printStackTrace();
-		}
-		
-	}
 	
 	
 	public void scrollTillElem(String field) {
@@ -110,12 +92,24 @@ public class AddNotifPage extends BaseClass {
 					Thread.sleep(2000);
 					driver.findElement(By.xpath("//android.widget.TextView[@text='"+prop.getProperty(field)+"']//following::android.view.ViewGroup[@index='2']")).sendKeys(prop.getProperty(FieldVal));
 					clickOutside.click();
-					saveOpt.click();
-					Thread.sleep(5000);
+					
 				} catch (InterruptedException e) {
 					
 					e.printStackTrace();
 				}
+				
+			}
+				
+				public void save() {
+					
+					try {
+						saveOpt.click();
+						Thread.sleep(5000);
+					} catch (InterruptedException e) {
+						
+						e.printStackTrace();
+					}
+				
 			}
 			
 		
