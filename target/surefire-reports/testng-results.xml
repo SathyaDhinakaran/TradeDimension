@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="2" failed="0" total="34" passed="32">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Command line suite" duration-ms="3546373" started-at="2019-10-15T06:00:16Z" finished-at="2019-10-15T06:59:22Z">
+    <groups>
+    </groups>
+    <test name="Command line test" duration-ms="3546373" started-at="2019-10-15T06:00:16Z" finished-at="2019-10-15T06:59:22Z">
+      <class name="com.tdm.qa.testcases.AdvSearchPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tdm.qa.testcases.AdvSearchPageTest@12843fce]" name="setUp" is-config="true" duration-ms="208822" started-at="2019-10-15T11:47:17Z" finished-at="2019-10-15T11:50:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="saveQuery()[pri:1, instance:com.tdm.qa.testcases.AdvSearchPageTest@12843fce]" name="saveQuery" duration-ms="26627" started-at="2019-10-15T11:50:46Z" finished-at="2019-10-15T11:51:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- saveQuery -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tdm.qa.testcases.AdvSearchPageTest@12843fce]" name="tearDown" is-config="true" duration-ms="2028" started-at="2019-10-15T11:51:13Z" finished-at="2019-10-15T11:51:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="FAIL" signature="setUp()[pri:0, instance:com.tdm.qa.testcases.AdvSearchPageTest@12843fce]" name="setUp" is-config="true" duration-ms="0" started-at="2019-10-15T12:12:28Z" finished-at="2019-10-15T12:12:28Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'INLF6DLLH2', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_151'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: C:\Users\dhsa7001\eclipse-w..., appActivity: md54e9aad3514586715abecb6fd..., appPackage: com.nielsen.TDMobileX, autoGrantPermissions: true, databaseEnabled: false, desired: {app: C:\Users\dhsa7001\eclipse-w..., appActivity: md54e9aad3514586715abecb6fd..., appPackage: com.nielsen.TDMobileX, autoGrantPermissions: true, deviceName: mydevice, platformName: android}, deviceManufacturer: samsung, deviceModel: SM-N950F, deviceName: 988a9b31423738305930, deviceScreenSize: 1440x2960, deviceUDID: 988a9b31423738305930, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, platform: LINUX, platformName: Android, platformVersion: 9, takesScreenshot: true, warnings: {}, webStorageEnabled: false}
+Session ID: c2c92037-3620-4a61-92c4-d3716c67f49b
+*** Element info: {Using=xpath, value=//*[@text='No of opening hours per weekday']//following::android.view.ViewGroup[@index='5']}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'INLF6DLLH2', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_151'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: C:\Users\dhsa7001\eclipse-w..., appActivity: md54e9aad3514586715abecb6fd..., appPackage: com.nielsen.TDMobileX, autoGrantPermissions: true, databaseEnabled: false, desired: {app: C:\Users\dhsa7001\eclipse-w..., appActivity: md54e9aad3514586715abecb6fd..., appPackage: com.nielsen.TDMobileX, autoGrantPermissions: true, deviceName: mydevice, platformName: android}, deviceManufacturer: samsung, deviceModel: SM-N950F, deviceName: 988a9b31423738305930, deviceScreenSize: 1440x2960, deviceUDID: 988a9b31423738305930, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, platform: LINUX, platformName: Android, platformVersion: 9, takesScreenshot: true, warnings: {}, webStorageEnabled: false}
+Session ID: c2c92037-3620-4a61-92c4-d3716c67f49b
+*** Element info: {Using=xpath, value=//*[@text='No of opening hours per weekday']//following::android.view.ViewGroup[@index='5']}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:152)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at com.tdm.qa.pages.AdvSearchPage.selectOperator(AdvSearchPage.java:206)
+	at com.tdm.qa.testcases.AdvSearchPageTest.setUp(AdvSearchPageTest.java:48)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:514)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:215)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:589)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="SKIP" signature="applySearch()[pri:2, instance:com.tdm.qa.testcases.AdvSearchPageTest@12843fce]" name="applySearch" duration-ms="0" started-at="2019-10-15T12:14:50Z" finished-at="2019-10-15T12:14:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- applySearch -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.tdm.qa.testcases.AdvSearchPageTest@12843fce]" name="tearDown" is-config="true" duration-ms="0" started-at="2019-10-15T12:14:50Z" finished-at="2019-10-15T12:14:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.tdm.qa.testcases.AdvSearchPageTest@12843fce]" name="tearDown" is-config="true" duration-ms="0" started-at="2019-10-15T12:20:49Z" finished-at="2019-10-15T12:20:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="SKIP" signature="setUp()[pri:0, instance:com.tdm.qa.testcases.AdvSearchPageTest@12843fce]" name="setUp" is-config="true" duration-ms="0" started-at="2019-10-15T12:20:49Z" finished-at="2019-10-15T12:20:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="SKIP" signature="resetQuery()[pri:3, instance:com.tdm.qa.testcases.AdvSearchPageTest@12843fce]" name="resetQuery" duration-ms="0" started-at="2019-10-15T12:20:49Z" finished-at="2019-10-15T12:20:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetQuery -->
+      </class> <!-- com.tdm.qa.testcases.AdvSearchPageTest -->
+      <class name="com.tdm.qa.testcases.CheckInPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tdm.qa.testcases.CheckInPageTest@97e1986]" name="setUp" is-config="true" duration-ms="117321" started-at="2019-10-15T11:37:28Z" finished-at="2019-10-15T11:39:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="checkInComm()[pri:0, instance:com.tdm.qa.testcases.CheckInPageTest@97e1986]" name="checkInComm" duration-ms="27941" started-at="2019-10-15T11:39:25Z" finished-at="2019-10-15T11:39:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkInComm -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tdm.qa.testcases.CheckInPageTest@97e1986]" name="tearDown" is-config="true" duration-ms="2169" started-at="2019-10-15T11:39:53Z" finished-at="2019-10-15T11:39:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tdm.qa.testcases.CheckInPageTest -->
+      <class name="com.tdm.qa.testcases.CheckInHistoryPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tdm.qa.testcases.CheckInHistoryPageTest@3dd3bcd]" name="setUp" is-config="true" duration-ms="113257" started-at="2019-10-15T11:35:32Z" finished-at="2019-10-15T11:37:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verifyCheckInHist()[pri:0, instance:com.tdm.qa.testcases.CheckInHistoryPageTest@3dd3bcd]" name="verifyCheckInHist" duration-ms="428" started-at="2019-10-15T11:37:25Z" finished-at="2019-10-15T11:37:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCheckInHist -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tdm.qa.testcases.CheckInHistoryPageTest@3dd3bcd]" name="tearDown" is-config="true" duration-ms="1915" started-at="2019-10-15T11:37:26Z" finished-at="2019-10-15T11:37:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tdm.qa.testcases.CheckInHistoryPageTest -->
+      <class name="com.tdm.qa.testcases.MissingStorePageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tdm.qa.testcases.MissingStorePageTest@69d9c55]" name="setUp" is-config="true" duration-ms="70106" started-at="2019-10-15T11:40:54Z" finished-at="2019-10-15T11:42:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="enterMissigStoreDetails()[pri:0, instance:com.tdm.qa.testcases.MissingStorePageTest@69d9c55]" name="enterMissigStoreDetails" duration-ms="93506" started-at="2019-10-15T11:42:04Z" finished-at="2019-10-15T11:43:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enterMissigStoreDetails -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tdm.qa.testcases.MissingStorePageTest@69d9c55]" name="tearDown" is-config="true" duration-ms="1834" started-at="2019-10-15T11:43:38Z" finished-at="2019-10-15T11:43:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tdm.qa.testcases.MissingStorePageTest -->
+      <class name="com.tdm.qa.testcases.HierarchiesPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tdm.qa.testcases.HierarchiesPageTest@26f67b76]" name="setUp" is-config="true" duration-ms="60825" started-at="2019-10-15T11:51:15Z" finished-at="2019-10-15T11:52:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="selectStoreAcc()[pri:1, instance:com.tdm.qa.testcases.HierarchiesPageTest@26f67b76]" name="selectStoreAcc" duration-ms="180588" started-at="2019-10-15T11:52:16Z" finished-at="2019-10-15T11:55:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectStoreAcc -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tdm.qa.testcases.HierarchiesPageTest@26f67b76]" name="tearDown" is-config="true" duration-ms="2094" started-at="2019-10-15T11:55:16Z" finished-at="2019-10-15T11:55:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tdm.qa.testcases.HierarchiesPageTest -->
+      <class name="com.tdm.qa.testcases.HomePageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tdm.qa.testcases.HomePageTest@153f5a29]" name="setUp" is-config="true" duration-ms="57038" started-at="2019-10-15T11:55:18Z" finished-at="2019-10-15T11:56:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verifyHomePage()[pri:1, instance:com.tdm.qa.testcases.HomePageTest@153f5a29]" name="verifyHomePage" duration-ms="358" started-at="2019-10-15T11:56:15Z" finished-at="2019-10-15T11:56:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHomePage -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tdm.qa.testcases.HomePageTest@153f5a29]" name="tearDown" is-config="true" duration-ms="2024" started-at="2019-10-15T11:56:16Z" finished-at="2019-10-15T11:56:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tdm.qa.testcases.HomePageTest@153f5a29]" name="setUp" is-config="true" duration-ms="56093" started-at="2019-10-15T12:14:50Z" finished-at="2019-10-15T12:15:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validateGoogleSearch()[pri:2, instance:com.tdm.qa.testcases.HomePageTest@153f5a29]" name="validateGoogleSearch" duration-ms="30202" started-at="2019-10-15T12:15:46Z" finished-at="2019-10-15T12:16:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateGoogleSearch -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tdm.qa.testcases.HomePageTest@153f5a29]" name="tearDown" is-config="true" duration-ms="1944" started-at="2019-10-15T12:16:16Z" finished-at="2019-10-15T12:16:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tdm.qa.testcases.HomePageTest@153f5a29]" name="setUp" is-config="true" duration-ms="55149" started-at="2019-10-15T12:20:49Z" finished-at="2019-10-15T12:21:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validateNielsenSearch()[pri:3, instance:com.tdm.qa.testcases.HomePageTest@153f5a29]" name="validateNielsenSearch" duration-ms="28734" started-at="2019-10-15T12:21:44Z" finished-at="2019-10-15T12:22:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateNielsenSearch -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tdm.qa.testcases.HomePageTest@153f5a29]" name="tearDown" is-config="true" duration-ms="1834" started-at="2019-10-15T12:22:13Z" finished-at="2019-10-15T12:22:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tdm.qa.testcases.HomePageTest -->
+      <class name="com.tdm.qa.testcases.NearMePageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tdm.qa.testcases.NearMePageTest@7ca48474]" name="setUp" is-config="true" duration-ms="56955" started-at="2019-10-15T11:57:19Z" finished-at="2019-10-15T11:58:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validateNavigationOption()[pri:1, instance:com.tdm.qa.testcases.NearMePageTest@7ca48474]" name="validateNavigationOption" duration-ms="56590" started-at="2019-10-15T11:58:16Z" finished-at="2019-10-15T11:59:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateNavigationOption -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tdm.qa.testcases.NearMePageTest@7ca48474]" name="tearDown" is-config="true" duration-ms="2112" started-at="2019-10-15T11:59:13Z" finished-at="2019-10-15T11:59:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tdm.qa.testcases.NearMePageTest -->
+      <class name="com.tdm.qa.testcases.OwnDataPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tdm.qa.testcases.OwnDataPageTest@61a485d2]" name="setUp" is-config="true" duration-ms="109861" started-at="2019-10-15T11:43:40Z" finished-at="2019-10-15T11:45:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="fillOwnData()[pri:0, instance:com.tdm.qa.testcases.OwnDataPageTest@61a485d2]" name="fillOwnData" duration-ms="37741" started-at="2019-10-15T11:45:30Z" finished-at="2019-10-15T11:46:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fillOwnData -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tdm.qa.testcases.OwnDataPageTest@61a485d2]" name="tearDown" is-config="true" duration-ms="2000" started-at="2019-10-15T11:46:07Z" finished-at="2019-10-15T11:46:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tdm.qa.testcases.OwnDataPageTest -->
+      <class name="com.tdm.qa.testcases.PrevCheckinPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tdm.qa.testcases.PrevCheckinPageTest@39fb3ab6]" name="setUp" is-config="true" duration-ms="55783" started-at="2019-10-15T12:02:32Z" finished-at="2019-10-15T12:03:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validatePrevCheckin()[pri:1, instance:com.tdm.qa.testcases.PrevCheckinPageTest@39fb3ab6]" name="validatePrevCheckin" duration-ms="7401" started-at="2019-10-15T12:03:28Z" finished-at="2019-10-15T12:03:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validatePrevCheckin -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tdm.qa.testcases.PrevCheckinPageTest@39fb3ab6]" name="tearDown" is-config="true" duration-ms="1834" started-at="2019-10-15T12:03:35Z" finished-at="2019-10-15T12:03:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tdm.qa.testcases.PrevCheckinPageTest -->
+      <class name="com.tdm.qa.testcases.SettingsPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tdm.qa.testcases.SettingsPageTest@b97c004]" name="setUp" is-config="true" duration-ms="67554" started-at="2019-10-15T12:08:46Z" finished-at="2019-10-15T12:09:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="resetLegend()[pri:1, instance:com.tdm.qa.testcases.SettingsPageTest@b97c004]" name="resetLegend" duration-ms="23656" started-at="2019-10-15T12:09:54Z" finished-at="2019-10-15T12:10:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetLegend -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tdm.qa.testcases.SettingsPageTest@b97c004]" name="tearDown" is-config="true" duration-ms="1906" started-at="2019-10-15T12:10:17Z" finished-at="2019-10-15T12:10:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tdm.qa.testcases.SettingsPageTest -->
+      <class name="com.tdm.qa.testcases.StoreMoreOptPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tdm.qa.testcases.StoreMoreOptPageTest@5056dfcb]" name="setUp" is-config="true" duration-ms="61252" started-at="2019-10-15T11:46:09Z" finished-at="2019-10-15T11:47:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="clickOnMoreOpt()[pri:0, instance:com.tdm.qa.testcases.StoreMoreOptPageTest@5056dfcb]" name="clickOnMoreOpt" duration-ms="4010" started-at="2019-10-15T11:47:11Z" finished-at="2019-10-15T11:47:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickOnMoreOpt -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tdm.qa.testcases.StoreMoreOptPageTest@5056dfcb]" name="tearDown" is-config="true" duration-ms="2587" started-at="2019-10-15T11:47:15Z" finished-at="2019-10-15T11:47:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tdm.qa.testcases.StoreMoreOptPageTest -->
+      <class name="com.tdm.qa.testcases.SignOutPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tdm.qa.testcases.SignOutPageTest@4590c9c3]" name="setUp" is-config="true" duration-ms="55658" started-at="2019-10-15T12:10:19Z" finished-at="2019-10-15T12:11:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="signOutNoOption()[pri:1, instance:com.tdm.qa.testcases.SignOutPageTest@4590c9c3]" name="signOutNoOption" duration-ms="4483" started-at="2019-10-15T12:11:15Z" finished-at="2019-10-15T12:11:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signOutNoOption -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tdm.qa.testcases.SignOutPageTest@4590c9c3]" name="tearDown" is-config="true" duration-ms="1824" started-at="2019-10-15T12:11:19Z" finished-at="2019-10-15T12:11:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tdm.qa.testcases.SignOutPageTest@4590c9c3]" name="setUp" is-config="true" duration-ms="54990" started-at="2019-10-15T12:19:48Z" finished-at="2019-10-15T12:20:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="signOutYesOption()[pri:2, instance:com.tdm.qa.testcases.SignOutPageTest@4590c9c3]" name="signOutYesOption" duration-ms="4438" started-at="2019-10-15T12:20:43Z" finished-at="2019-10-15T12:20:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signOutYesOption -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tdm.qa.testcases.SignOutPageTest@4590c9c3]" name="tearDown" is-config="true" duration-ms="1768" started-at="2019-10-15T12:20:47Z" finished-at="2019-10-15T12:20:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tdm.qa.testcases.SignOutPageTest -->
+      <class name="com.tdm.qa.testcases.LoginPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tdm.qa.testcases.LoginPageTest@7f560810]" name="setUp" is-config="true" duration-ms="17863" started-at="2019-10-15T11:39:55Z" finished-at="2019-10-15T11:40:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="loginTest()[pri:0, instance:com.tdm.qa.testcases.LoginPageTest@7f560810]" name="loginTest" duration-ms="39535" started-at="2019-10-15T11:40:13Z" finished-at="2019-10-15T11:40:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tdm.qa.testcases.LoginPageTest@7f560810]" name="tearDown" is-config="true" duration-ms="1892" started-at="2019-10-15T11:40:52Z" finished-at="2019-10-15T11:40:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tdm.qa.testcases.LoginPageTest -->
+      <class name="com.tdm.qa.testcases.SelectFieldPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tdm.qa.testcases.SelectFieldPageTest@3c09711b]" name="setUp" is-config="true" duration-ms="64052" started-at="2019-10-15T12:05:37Z" finished-at="2019-10-15T12:06:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="setLegendAndSettingsPage()[pri:1, instance:com.tdm.qa.testcases.SelectFieldPageTest@3c09711b]" name="setLegendAndSettingsPage" duration-ms="16789" started-at="2019-10-15T12:06:41Z" finished-at="2019-10-15T12:06:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setLegendAndSettingsPage -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tdm.qa.testcases.SelectFieldPageTest@3c09711b]" name="tearDown" is-config="true" duration-ms="1852" started-at="2019-10-15T12:06:58Z" finished-at="2019-10-15T12:07:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tdm.qa.testcases.SelectFieldPageTest@3c09711b]" name="setUp" is-config="true" duration-ms="61534" started-at="2019-10-15T12:17:41Z" finished-at="2019-10-15T12:18:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="selectFieldAndHomePage()[pri:2, instance:com.tdm.qa.testcases.SelectFieldPageTest@3c09711b]" name="selectFieldAndHomePage" duration-ms="63384" started-at="2019-10-15T12:18:43Z" finished-at="2019-10-15T12:19:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectFieldAndHomePage -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tdm.qa.testcases.SelectFieldPageTest@3c09711b]" name="tearDown" is-config="true" duration-ms="1818" started-at="2019-10-15T12:19:46Z" finished-at="2019-10-15T12:19:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tdm.qa.testcases.SelectFieldPageTest -->
+      <class name="com.tdm.qa.testcases.AddNotifPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tdm.qa.testcases.AddNotifPageTest@13c78c0b]" name="setUp" is-config="true" duration-ms="141369" started-at="2019-10-15T11:31:18Z" finished-at="2019-10-15T11:33:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="addNotification()[pri:0, instance:com.tdm.qa.testcases.AddNotifPageTest@13c78c0b]" name="addNotification" duration-ms="110642" started-at="2019-10-15T11:33:39Z" finished-at="2019-10-15T11:35:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addNotification -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tdm.qa.testcases.AddNotifPageTest@13c78c0b]" name="tearDown" is-config="true" duration-ms="2107" started-at="2019-10-15T11:35:30Z" finished-at="2019-10-15T11:35:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tdm.qa.testcases.AddNotifPageTest -->
+      <class name="com.tdm.qa.testcases.MoreOptionPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tdm.qa.testcases.MoreOptionPageTest@13a57a3b]" name="setUp" is-config="true" duration-ms="57189" started-at="2019-10-15T11:56:18Z" finished-at="2019-10-15T11:57:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verifyMoreOptionpopup()[pri:1, instance:com.tdm.qa.testcases.MoreOptionPageTest@13a57a3b]" name="verifyMoreOptionpopup" duration-ms="2099" started-at="2019-10-15T11:57:15Z" finished-at="2019-10-15T11:57:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMoreOptionpopup -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tdm.qa.testcases.MoreOptionPageTest@13a57a3b]" name="tearDown" is-config="true" duration-ms="2000" started-at="2019-10-15T11:57:17Z" finished-at="2019-10-15T11:57:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tdm.qa.testcases.MoreOptionPageTest -->
+      <class name="com.tdm.qa.testcases.AboutPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tdm.qa.testcases.AboutPageTest@2cb4c3ab]" name="setUp" is-config="true" duration-ms="59371" started-at="2019-10-15T11:30:16Z" finished-at="2019-10-15T11:31:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validateAboutPage()[pri:0, instance:com.tdm.qa.testcases.AboutPageTest@2cb4c3ab]" name="validateAboutPage" duration-ms="1038" started-at="2019-10-15T11:31:15Z" finished-at="2019-10-15T11:31:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateAboutPage -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tdm.qa.testcases.AboutPageTest@2cb4c3ab]" name="tearDown" is-config="true" duration-ms="1900" started-at="2019-10-15T11:31:16Z" finished-at="2019-10-15T11:31:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tdm.qa.testcases.AboutPageTest -->
+      <class name="com.tdm.qa.testcases.SavedQueryPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tdm.qa.testcases.SavedQueryPageTest@7946e1f4]" name="setUp" is-config="true" duration-ms="57667" started-at="2019-10-15T12:04:37Z" finished-at="2019-10-15T12:05:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verifySavedQueryPage()[pri:1, instance:com.tdm.qa.testcases.SavedQueryPageTest@7946e1f4]" name="verifySavedQueryPage" duration-ms="306" started-at="2019-10-15T12:05:35Z" finished-at="2019-10-15T12:05:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySavedQueryPage -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tdm.qa.testcases.SavedQueryPageTest@7946e1f4]" name="tearDown" is-config="true" duration-ms="1818" started-at="2019-10-15T12:05:35Z" finished-at="2019-10-15T12:05:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tdm.qa.testcases.SavedQueryPageTest@7946e1f4]" name="setUp" is-config="true" duration-ms="58412" started-at="2019-10-15T12:16:18Z" finished-at="2019-10-15T12:17:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verifyApplySearch()[pri:2, instance:com.tdm.qa.testcases.SavedQueryPageTest@7946e1f4]" name="verifyApplySearch" duration-ms="22751" started-at="2019-10-15T12:17:16Z" finished-at="2019-10-15T12:17:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyApplySearch -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tdm.qa.testcases.SavedQueryPageTest@7946e1f4]" name="tearDown" is-config="true" duration-ms="1797" started-at="2019-10-15T12:17:39Z" finished-at="2019-10-15T12:17:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tdm.qa.testcases.SavedQueryPageTest@7946e1f4]" name="setUp" is-config="true" duration-ms="57889" started-at="2019-10-15T12:22:15Z" finished-at="2019-10-15T12:23:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="saveAsQuery()[pri:3, instance:com.tdm.qa.testcases.SavedQueryPageTest@7946e1f4]" name="saveAsQuery" duration-ms="89267" started-at="2019-10-15T12:23:13Z" finished-at="2019-10-15T12:24:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- saveAsQuery -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tdm.qa.testcases.SavedQueryPageTest@7946e1f4]" name="tearDown" is-config="true" duration-ms="1822" started-at="2019-10-15T12:24:42Z" finished-at="2019-10-15T12:24:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tdm.qa.testcases.SavedQueryPageTest@7946e1f4]" name="setUp" is-config="true" duration-ms="57256" started-at="2019-10-15T12:24:44Z" finished-at="2019-10-15T12:25:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="saveQuery()[pri:4, instance:com.tdm.qa.testcases.SavedQueryPageTest@7946e1f4]" name="saveQuery" duration-ms="51953" started-at="2019-10-15T12:25:41Z" finished-at="2019-10-15T12:26:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- saveQuery -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tdm.qa.testcases.SavedQueryPageTest@7946e1f4]" name="tearDown" is-config="true" duration-ms="1907" started-at="2019-10-15T12:26:33Z" finished-at="2019-10-15T12:26:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tdm.qa.testcases.SavedQueryPageTest@7946e1f4]" name="setUp" is-config="true" duration-ms="56989" started-at="2019-10-15T12:26:35Z" finished-at="2019-10-15T12:27:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="clickOnReset()[pri:5, instance:com.tdm.qa.testcases.SavedQueryPageTest@7946e1f4]" name="clickOnReset" duration-ms="35411" started-at="2019-10-15T12:27:32Z" finished-at="2019-10-15T12:28:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickOnReset -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tdm.qa.testcases.SavedQueryPageTest@7946e1f4]" name="tearDown" is-config="true" duration-ms="1777" started-at="2019-10-15T12:28:07Z" finished-at="2019-10-15T12:28:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tdm.qa.testcases.SavedQueryPageTest@7946e1f4]" name="setUp" is-config="true" duration-ms="55589" started-at="2019-10-15T12:28:09Z" finished-at="2019-10-15T12:29:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="deleteQuery()[pri:6, instance:com.tdm.qa.testcases.SavedQueryPageTest@7946e1f4]" name="deleteQuery" duration-ms="15563" started-at="2019-10-15T12:29:05Z" finished-at="2019-10-15T12:29:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteQuery -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tdm.qa.testcases.SavedQueryPageTest@7946e1f4]" name="tearDown" is-config="true" duration-ms="1861" started-at="2019-10-15T12:29:20Z" finished-at="2019-10-15T12:29:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tdm.qa.testcases.SavedQueryPageTest -->
+      <class name="com.tdm.qa.testcases.OfflineDataPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tdm.qa.testcases.OfflineDataPageTest@59e84876]" name="setUp" is-config="true" duration-ms="57551" started-at="2019-10-15T12:00:27Z" finished-at="2019-10-15T12:01:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="downloadOfflineData()[pri:1, instance:com.tdm.qa.testcases.OfflineDataPageTest@59e84876]" name="downloadOfflineData" duration-ms="64930" started-at="2019-10-15T12:01:25Z" finished-at="2019-10-15T12:02:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- downloadOfflineData -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tdm.qa.testcases.OfflineDataPageTest@59e84876]" name="tearDown" is-config="true" duration-ms="1806" started-at="2019-10-15T12:02:30Z" finished-at="2019-10-15T12:02:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tdm.qa.testcases.OfflineDataPageTest -->
+      <class name="com.tdm.qa.testcases.ResultListPageTest">
+        <test-method status="PASS" signature="SetUp()[pri:0, instance:com.tdm.qa.testcases.ResultListPageTest@6276ae34]" name="SetUp" is-config="true" duration-ms="55074" started-at="2019-10-15T12:03:37Z" finished-at="2019-10-15T12:04:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SetUp -->
+        <test-method status="PASS" signature="verifyResultList()[pri:1, instance:com.tdm.qa.testcases.ResultListPageTest@6276ae34]" name="verifyResultList" duration-ms="3636" started-at="2019-10-15T12:04:32Z" finished-at="2019-10-15T12:04:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyResultList -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tdm.qa.testcases.ResultListPageTest@6276ae34]" name="tearDown" is-config="true" duration-ms="1875" started-at="2019-10-15T12:04:35Z" finished-at="2019-10-15T12:04:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tdm.qa.testcases.ResultListPageTest -->
+      <class name="com.tdm.qa.testcases.StoreDetailsPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tdm.qa.testcases.StoreDetailsPageTest@32e6e9c3]" name="setUp" is-config="true" duration-ms="61091" started-at="2019-10-15T12:11:21Z" finished-at="2019-10-15T12:12:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verifyStoreHierarchy()[pri:1, instance:com.tdm.qa.testcases.StoreDetailsPageTest@32e6e9c3]" name="verifyStoreHierarchy" duration-ms="4525" started-at="2019-10-15T12:12:22Z" finished-at="2019-10-15T12:12:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyStoreHierarchy -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tdm.qa.testcases.StoreDetailsPageTest@32e6e9c3]" name="tearDown" is-config="true" duration-ms="1838" started-at="2019-10-15T12:12:27Z" finished-at="2019-10-15T12:12:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tdm.qa.testcases.StoreDetailsPageTest -->
+      <class name="com.tdm.qa.testcases.NotificationsPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tdm.qa.testcases.NotificationsPageTest@337d0578]" name="setUp" is-config="true" duration-ms="64130" started-at="2019-10-15T11:59:15Z" finished-at="2019-10-15T12:00:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="missingStore()[pri:1, instance:com.tdm.qa.testcases.NotificationsPageTest@337d0578]" name="missingStore" duration-ms="6461" started-at="2019-10-15T12:00:19Z" finished-at="2019-10-15T12:00:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- missingStore -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tdm.qa.testcases.NotificationsPageTest@337d0578]" name="tearDown" is-config="true" duration-ms="2258" started-at="2019-10-15T12:00:25Z" finished-at="2019-10-15T12:00:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tdm.qa.testcases.NotificationsPageTest -->
+      <class name="com.tdm.qa.testcases.SettingsEditPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tdm.qa.testcases.SettingsEditPageTest@5cc7c2a6]" name="setUp" is-config="true" duration-ms="98684" started-at="2019-10-15T12:07:00Z" finished-at="2019-10-15T12:08:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="selectReset()[pri:1, instance:com.tdm.qa.testcases.SettingsEditPageTest@5cc7c2a6]" name="selectReset" duration-ms="7421" started-at="2019-10-15T12:08:39Z" finished-at="2019-10-15T12:08:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectReset -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tdm.qa.testcases.SettingsEditPageTest@5cc7c2a6]" name="tearDown" is-config="true" duration-ms="1" started-at="2019-10-15T12:29:22Z" finished-at="2019-10-15T12:29:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tdm.qa.testcases.SettingsEditPageTest -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Command line suite -->
+</testng-results>

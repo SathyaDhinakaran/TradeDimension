@@ -5,6 +5,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Properties;
+
+import org.apache.log4j.Logger;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -19,6 +21,7 @@ public class BaseClass {
 	public static Properties prop;
 	public static URL url;
 	public static WebDriverWait wait;
+	Logger log=Logger.getRootLogger();
 	
 	
 	public BaseClass() {
