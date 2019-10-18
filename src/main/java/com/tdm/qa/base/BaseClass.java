@@ -7,8 +7,12 @@ import java.net.URL;
 import java.util.Properties;
 
 import org.apache.log4j.Logger;
+//import org.apache.logging.log4j.LogManager;
+//import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.tdm.qa.testcases.AboutPageTest;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
@@ -21,7 +25,7 @@ public class BaseClass {
 	public static Properties prop;
 	public static URL url;
 	public static WebDriverWait wait;
-	Logger log=Logger.getRootLogger();
+	 Logger log=Logger.getLogger(BaseClass.class);
 	
 	
 	public BaseClass() {
@@ -53,6 +57,7 @@ public class BaseClass {
 			caps.setCapability("autoGrantPermissions",prop.getProperty("permissions"));
 			url =new URL(prop.getProperty("urls"));
 			driver=new AndroidDriver(url,caps);
+			log.info("Desired capabilities are successfully loaded");
 			driver.manage().deleteAllCookies();
 			wait=new WebDriverWait(driver,50);
 			Thread.sleep(3000);

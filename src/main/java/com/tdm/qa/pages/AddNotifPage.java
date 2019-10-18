@@ -2,6 +2,8 @@ package com.tdm.qa.pages;
 
 import java.util.List;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -52,6 +54,9 @@ public class AddNotifPage extends BaseClass {
 		PageFactory.initElements(driver, this);
 	}
 	
+	Logger log=LogManager.getLogger(AddNotifPage.class);	
+	
+	
 	public void clickOnShopNameEdit(String shopN, String comm) {
 		
 		try {
@@ -59,12 +64,15 @@ public class AddNotifPage extends BaseClass {
 			shopName.click();
 			shopName.clear();
 			shopName.sendKeys(prop.getProperty(shopN));
+			log.info("AddNotifPage: Shop name is edited");
 			clickOutside.click();
 			comments.clear();
 			comments.sendKeys(prop.getProperty(comm));
+			log.info("AddNotifPage: Comments are added");
 			Thread.sleep(2000);
 			clickOutside.click();
 			addFields.click();
+			log.info("AddNotifPage: New field is added");
 			Thread.sleep(5000);
 			
 			
@@ -72,6 +80,8 @@ public class AddNotifPage extends BaseClass {
 		} catch (Exception e) {
 			
 			e.printStackTrace();
+			log.error("AddNotifPage: Exception has occured");
+			
 		}
 		
 		
@@ -92,10 +102,12 @@ public class AddNotifPage extends BaseClass {
 					Thread.sleep(2000);
 					driver.findElement(By.xpath("//android.widget.TextView[@text='"+prop.getProperty(field)+"']//following::android.view.ViewGroup[@index='2']")).sendKeys(prop.getProperty(FieldVal));
 					clickOutside.click();
+					log.info("AddNotifPage: Field and its value is added");
 					
 				} catch (InterruptedException e) {
 					
 					e.printStackTrace();
+					log.error("AddNotifPage: Exception has occured");
 				}
 				
 			}
@@ -105,9 +117,11 @@ public class AddNotifPage extends BaseClass {
 					try {
 						saveOpt.click();
 						Thread.sleep(5000);
+						
 					} catch (InterruptedException e) {
 						
 						e.printStackTrace();
+						log.error("AddNotifPage: Exception has occured");
 					}
 				
 			}

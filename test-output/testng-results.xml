@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="56697" started-at="2019-10-15T11:26:57Z" finished-at="2019-10-15T11:27:54Z">
+  <suite name="Default suite" duration-ms="248872" started-at="2019-10-18T11:25:32Z" finished-at="2019-10-18T11:29:40Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="56697" started-at="2019-10-15T11:26:57Z" finished-at="2019-10-15T11:27:54Z">
-      <class name="com.tdm.qa.testcases.LoginPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tdm.qa.testcases.LoginPageTest@61a485d2]" name="setUp" is-config="true" duration-ms="17049" started-at="2019-10-15T16:56:57Z" finished-at="2019-10-15T16:57:14Z">
+    <test name="Default test" duration-ms="248872" started-at="2019-10-18T11:25:32Z" finished-at="2019-10-18T11:29:40Z">
+      <class name="com.tdm.qa.testcases.AddNotifPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tdm.qa.testcases.AddNotifPageTest@5cc7c2a6]" name="setUp" is-config="true" duration-ms="141033" started-at="2019-10-18T16:55:32Z" finished-at="2019-10-18T16:57:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="loginTest()[pri:0, instance:com.tdm.qa.testcases.LoginPageTest@61a485d2]" name="loginTest" duration-ms="37844" started-at="2019-10-15T16:57:14Z" finished-at="2019-10-15T16:57:52Z">
+        <test-method status="PASS" signature="addNotification()[pri:0, instance:com.tdm.qa.testcases.AddNotifPageTest@5cc7c2a6]" name="addNotification" duration-ms="105903" started-at="2019-10-18T16:57:53Z" finished-at="2019-10-18T16:59:39Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tdm.qa.testcases.LoginPageTest@61a485d2]" name="tearDown" is-config="true" duration-ms="1789" started-at="2019-10-15T16:57:52Z" finished-at="2019-10-15T16:57:54Z">
+        </test-method> <!-- addNotification -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tdm.qa.testcases.AddNotifPageTest@5cc7c2a6]" name="tearDown" is-config="true" duration-ms="1924" started-at="2019-10-18T16:59:39Z" finished-at="2019-10-18T16:59:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.tdm.qa.testcases.LoginPageTest -->
+      </class> <!-- com.tdm.qa.testcases.AddNotifPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

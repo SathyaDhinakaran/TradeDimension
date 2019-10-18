@@ -1,5 +1,7 @@
 package com.tdm.qa.testcases;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -23,6 +25,9 @@ public class AddNotifPageTest extends BaseClass{
 	StoreMoreOptPage storemoreoptpage;
 	AddNotifPage addnotifpage;
 	AdvSearchPage advsearchpage ;
+	
+	Logger log=LogManager.getLogger(AddNotifPageTest.class);	
+	
 	
 public AddNotifPageTest() {
 	super();
@@ -51,18 +56,18 @@ public void setUp() throws Exception {
 @Test
 public void addNotification() throws Exception {
 	
+	log.info("AddNotifPageTest: Inside add notification block");
 	addnotifpage.clickOnShopNameEdit("addNotiShopName","addNotiComm");
 	TestUtil.scrollUpAndDownWithClick("addNotiAddField");
 	advsearchpage.saveSelectedField();
-	
 	addnotifpage.scrollTillElem("addNotiAddField");
 	addnotifpage.enterVal("addNotiAddField", "addNotiFieldVal");
-	//addnotifpage.addGeoCode("addNotiAddField");
 	TestUtil.scrollUpAndDownWithClick("shopN");
 	addnotifpage.save();
+	log.info("AddNotifPageTest: Notification is saved");
 	storedetailspage.clickOnMoreOpt();
 	Assert.assertTrue(storemoreoptpage.verifyNotif("addNotiComm"));
-	
+	log.info("AddNotifPageTest: Verified added notification");
 }
 
 @AfterMethod

@@ -81,11 +81,11 @@ public boolean verifyNotif(String exp) {
 	
 	try {
 		String expected=prop.getProperty(exp);
-		System.out.println(expected);
+		//System.out.println(expected);
 		notifHistory.click();
 		Thread.sleep(3000);
 		String Actual=driver.findElement(By.xpath("//android.view.ViewGroup[@index='4']")).getText();
-		System.out.println(Actual);
+		//System.out.println(Actual);
 		
 		if(Actual.contains(expected))
 		{

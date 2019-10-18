@@ -1,5 +1,9 @@
 package com.tdm.qa.testcases;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+//import org.apache.logging.log4j.LogManager;
+//import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -17,6 +21,8 @@ public class AboutPageTest extends BaseClass {
 	HomePage homepage;
 	MoreOptionPage moreoptionpage;
 	AboutPage aboutpage;
+	Logger log=LogManager.getLogger(AboutPageTest.class);	
+	
 	
 	public AboutPageTest() {
 		super();
@@ -37,8 +43,11 @@ public class AboutPageTest extends BaseClass {
 	@Test
 	public void validateAboutPage() {
 		Assert.assertTrue(aboutpage.verifyPrivacyNote());
+		log.info("AboutPageTest: Privacy note link is successfully verified");
 		Assert.assertTrue(aboutpage.verifyUserManual());
+		log.info("AboutPageTest: User manual link is successfully verified");
 		Assert.assertTrue(aboutpage.verifyImpressum());
+		log.info("AboutPageTest: Impressum link is successfully verified");
 		
 	}
 	
