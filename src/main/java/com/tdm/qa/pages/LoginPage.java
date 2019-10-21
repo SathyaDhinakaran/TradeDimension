@@ -1,16 +1,12 @@
 package com.tdm.qa.pages;
 
-import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.By;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import com.tdm.qa.util.TestUtil;
 import com.tdm.qa.base.BaseClass;
 
 public class LoginPage extends BaseClass{
@@ -34,6 +30,7 @@ public class LoginPage extends BaseClass{
     @FindBy(xpath="//*[@text='Sign in']//following::android.widget.TextView")
 	WebElement loginUnsuccessful;
 	
+    Logger log=LogManager.getLogger(LoginPage.class);
 		
 	public LoginPage() {
 		PageFactory.initElements(driver, this);
@@ -55,10 +52,12 @@ public class LoginPage extends BaseClass{
 	if(!name.contentEquals(expected)) {
 		username.sendKeys(prop.getProperty(un));
 	}
-		
+	    log.info("LoginPage: Entered username");
 		password.sendKeys(prop.getProperty(pswd));
+		log.info("LoginPage: Entered password");
 		clickOutside.click();
 		loginBtn.click();
+		log.info("LoginPage: clicked on login");
 		Thread.sleep(20000);
 		//wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Near Me']")));
 		return new HomePage();

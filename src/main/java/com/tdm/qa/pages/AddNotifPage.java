@@ -1,21 +1,13 @@
 package com.tdm.qa.pages;
 
-import java.util.List;
-
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.touch.TouchActions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import com.tdm.qa.base.BaseClass;
 import com.tdm.qa.util.TestUtil;
-
-import io.appium.java_client.MobileElement;
-
 
 
 public class AddNotifPage extends BaseClass {
@@ -50,11 +42,12 @@ public class AddNotifPage extends BaseClass {
 	@FindBy(xpath="//android.view.ViewGroup[@index='2']")
 	WebElement saveOpt;
 	
+	Logger log=LogManager.getLogger(AddNotifPage.class);
+	
 	public AddNotifPage(){
 		PageFactory.initElements(driver, this);
 	}
 	
-	Logger log=LogManager.getLogger(AddNotifPage.class);	
 	
 	
 	public void clickOnShopNameEdit(String shopN, String comm) {

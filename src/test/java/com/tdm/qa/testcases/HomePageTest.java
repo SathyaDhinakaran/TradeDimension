@@ -1,5 +1,7 @@
 package com.tdm.qa.testcases;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -15,6 +17,8 @@ public class HomePageTest extends BaseClass{
 	LoginPage loginpage;
 	HomePage homepage;
 	NearMePage nearmepage;
+	
+	Logger log=LogManager.getLogger(HomePageTest.class);
 	
 	public HomePageTest() {
 		super();
@@ -34,6 +38,7 @@ public class HomePageTest extends BaseClass{
 	@Test(priority=1)
 	public void verifyHomePage() {
 		Assert.assertTrue(homepage.verifyNearMeLabel());
+		log.info("HomePageTest: home page is displayed successfully");
 	}
 	
 	@Test(priority=2)
@@ -41,6 +46,7 @@ public class HomePageTest extends BaseClass{
 		homepage.clickOnGoogleSearch();
 		homepage.enterGoogleSearchVal("googleSearchtxt");
 		Assert.assertTrue(nearmepage.verifyNearMeShop());
+		log.info("HomePageTest: Shops are displayed for Google search");
 	}
 	
 	@Test(priority=3)
@@ -49,6 +55,7 @@ public class HomePageTest extends BaseClass{
 		homepage.clickOnNielsenIcon();
 		homepage.enterNielsenSearch("nielsenSearchTxt");
 		Assert.assertTrue(nearmepage.verifyNearMeShop());
+		log.info("HomePageTest: Shop is displayed for Nielsen search");
 		
 	}
 	@AfterMethod

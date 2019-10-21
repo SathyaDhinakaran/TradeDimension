@@ -7,7 +7,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.tdm.qa.base.BaseClass;
-import com.tdm.qa.testcases.AboutPageTest;
 
 public class AboutPage extends BaseClass{
 	
@@ -46,7 +45,7 @@ public class AboutPage extends BaseClass{
 	To check whether link for Impressum is displayed or not
 	*/
 	public boolean verifyImpressum() {
-		log.info("AboutPage: Inside impressum block");
+		log.info("AboutPage: Inside Impressum block");
 		return impressum.isDisplayed();
 	}
 }

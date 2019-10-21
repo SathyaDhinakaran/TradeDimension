@@ -1,5 +1,7 @@
 package com.tdm.qa.testcases;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -23,6 +25,9 @@ public class CheckInPageTest extends BaseClass {
     StoreMoreOptPage storemoreoptpage;
     CheckInHistoryPage checkinhistorypage;
     NearMePage nearmepage;
+    
+    Logger log=LogManager.getLogger(CheckInPageTest.class);
+	
     
 	public CheckInPageTest() {
 		super();
@@ -53,7 +58,7 @@ public class CheckInPageTest extends BaseClass {
 		storedetailspage.clickOnMoreOpt();
 		storemoreoptpage.clickOnCheckInHist();
 		Assert.assertTrue(checkinhistorypage.verifyCheckIn("checkinComm"));
-		
+		log.info("CheckInPageTest: Check-in comment is verified");
 	}
 	
 	@AfterMethod

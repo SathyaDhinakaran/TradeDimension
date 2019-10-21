@@ -1,0 +1,110 @@
+2019-10-21 12:28:14 [main] INFO :: Desired capabilities are successfully loaded
+2019-10-21 12:28:53 [main] INFO :: HomePage: Clicked on Google search address bar
+2019-10-21 12:29:02 [main] INFO :: HomePage: Entered google search value
+2019-10-21 12:29:04 [main] INFO :: HomePage: Selected suggestion from google search list
+2019-10-21 12:29:54 [main] INFO :: CheckInHistoryPageTest: Checkin history page is displaying successfully
+2019-10-21 12:30:12 [main] INFO :: Desired capabilities are successfully loaded
+2019-10-21 12:30:53 [main] INFO :: HomePage: Clicked on more options
+2019-10-21 12:30:56 [main] INFO :: AboutPage: Inside Privacy note block
+2019-10-21 12:30:56 [main] INFO :: AboutPageTest: Privacy note link is successfully verified
+2019-10-21 12:30:56 [main] INFO :: AboutPage: Inside user manual block
+2019-10-21 12:30:57 [main] INFO :: AboutPageTest: User manual link is successfully verified
+2019-10-21 12:30:57 [main] INFO :: AboutPage: Inside impressum block
+2019-10-21 12:30:57 [main] INFO :: AboutPageTest: Impressum link is successfully verified
+2019-10-21 12:31:15 [main] INFO :: Desired capabilities are successfully loaded
+2019-10-21 12:32:06 [main] INFO :: HomePage: Clicked on Google search address bar
+2019-10-21 12:32:14 [main] INFO :: HomePage: Entered google search value
+2019-10-21 12:32:15 [main] INFO :: HomePage: Selected suggestion from google search list
+2019-10-21 12:33:20 [main] INFO :: CheckInPage: Checkin comment saved successfully
+2019-10-21 12:33:34 [main] INFO :: CheckInPageTest: Checkin comment is verified
+2019-10-21 12:33:52 [main] INFO :: Desired capabilities are successfully loaded
+2019-10-21 12:34:33 [main] INFO :: HomePage: Clicked on more options
+2019-10-21 12:34:38 [main] INFO :: HierarchiesPageTest: Hierarchy screen is loaded successfully
+2019-10-21 12:34:48 [main] INFO :: HierarchiesPageTest: Account is expanded successfully
+2019-10-21 12:36:57 [main] INFO :: HierarchiesPageTest: Nodes are selected
+2019-10-21 12:37:20 [main] INFO :: HierarchiesPageTest: Clicked on continue with
+2019-10-21 12:37:41 [main] INFO :: HierarchiesPageTest: Selected store
+2019-10-21 12:37:42 [main] INFO :: HierarchiesPageTest: Stores are displaying successfully
+2019-10-21 12:38:00 [main] INFO :: Desired capabilities are successfully loaded
+2019-10-21 12:38:40 [main] INFO :: HomePageTest: home page is displayed successfully
+2019-10-21 12:39:00 [main] INFO :: Desired capabilities are successfully loaded
+2019-10-21 12:39:51 [main] INFO :: HomePage: Clicked on Google search address bar
+2019-10-21 12:39:59 [main] INFO :: HomePage: Entered google search value
+2019-10-21 12:40:01 [main] INFO :: HomePage: Selected suggestion from google search list
+2019-10-21 12:40:21 [main] INFO :: HomePageTest: Shops are displayed for Google search
+2019-10-21 12:40:39 [main] INFO :: Desired capabilities are successfully loaded
+2019-10-21 12:41:30 [main] INFO :: HomePage: Clicked on Google search address bar
+2019-10-21 12:41:30 [main] INFO :: HomePage: Clicked on Nielsen icon
+2019-10-21 12:41:38 [main] INFO :: HomePage: Entered Nielsen search value
+2019-10-21 12:41:45 [main] INFO :: HomePage: Selected suggestion from Nielsen search list
+2019-10-21 12:41:56 [main] INFO :: HomePageTest: Shop is displayed for Nielsen search
+2019-10-21 12:42:14 [main] INFO :: Desired capabilities are successfully loaded
+2019-10-21 12:42:53 [main] INFO :: HomePage: Clicked on near me
+2019-10-21 12:44:18 [main] INFO :: AddNotifPageTest: Inside add notification block
+2019-10-21 12:44:41 [main] INFO :: AddNotifPage: Shop name is edited
+2019-10-21 12:45:08 [main] INFO :: AddNotifPage: Comments are added
+2019-10-21 12:45:12 [main] INFO :: AddNotifPage: New field is added
+2019-10-21 12:45:46 [main] INFO :: AddNotifPage: Field and its value is added
+2019-10-21 12:46:04 [main] INFO :: AddNotifPageTest: Notification is saved
+2019-10-21 12:46:13 [main] INFO :: AddNotifPageTest: Verified added notification
+2019-10-21 12:46:31 [main] INFO :: Desired capabilities are successfully loaded
+2019-10-21 12:47:21 [main] INFO :: HomePage: Clicked on advanced search
+2019-10-21 12:47:28 [main] INFO :: AdvSearchPage: Clicked on add field
+2019-10-21 12:48:09 [main] INFO :: AdvSearchPageTest: All the fields are selected
+2019-10-21 12:48:13 [main] INFO :: AdvSearchPageTest: Selected fields are saved
+2019-10-21 12:48:19 [main] INFO :: AdvSearchPage: Operator selected for 'start with'(String data type)
+2019-10-21 12:48:26 [main] INFO :: AdvSearchPage: Value added for 'start with'
+2019-10-21 12:48:37 [main] INFO :: AdvSearchPage: Operator is selected for 'equals'(numeric data type)
+2019-10-21 12:48:45 [main] INFO :: AdvSearchPage: Value for te field is entered
+2019-10-21 12:48:55 [main] INFO :: AdvSearchPage: Operator selected for 'is included in'(picker data type) 
+2019-10-21 12:49:10 [main] INFO :: AdvSearchPage: Search value is entered
+2019-10-21 12:49:13 [main] INFO :: AdvSearchPage: Selected value for the field
+2019-10-21 12:49:19 [main] INFO :: AdvSearchPage: Operator is selected for 'on'(Date data type)
+2019-10-21 12:49:41 [main] INFO :: AdvSearchPage: Date, month and year is selected
+2019-10-21 12:49:49 [main] INFO :: AdvSearchPage: Operator is selected for 'on'(boolean data type)
+2019-10-21 12:49:49 [main] INFO :: AdvSearchPageTest: Operator and its value are added
+2019-10-21 12:49:53 [main] INFO :: AdvSearchPage: Clicked on save button
+2019-10-21 12:50:02 [main] INFO :: AdvSearchPage: Query name entered successfully
+2019-10-21 12:50:03 [main] INFO :: AdvSearchPage: Saved query
+2019-10-21 12:50:08 [main] INFO :: AdvSearchPageTest: Query is saved successfully
+2019-10-21 12:50:09 [main] INFO :: HomePage: Clicked on saved query menu
+2019-10-21 12:50:16 [main] INFO :: AdvSearchPageTest: Verified the saved query
+2019-10-21 12:50:34 [main] INFO :: Desired capabilities are successfully loaded
+2019-10-21 12:51:15 [main] INFO :: HomePage: Clicked on advanced search
+2019-10-21 12:51:22 [main] INFO :: AdvSearchPage: Clicked on add field
+2019-10-21 12:52:03 [main] INFO :: AdvSearchPageTest: All the fields are selected
+2019-10-21 12:52:07 [main] INFO :: AdvSearchPageTest: Selected fields are saved
+2019-10-21 12:52:12 [main] INFO :: AdvSearchPage: Operator selected for 'start with'(String data type)
+2019-10-21 12:52:20 [main] INFO :: AdvSearchPage: Value added for 'start with'
+2019-10-21 12:52:31 [main] INFO :: AdvSearchPage: Operator is selected for 'equals'(numeric data type)
+2019-10-21 12:52:39 [main] INFO :: AdvSearchPage: Value for te field is entered
+2019-10-21 12:52:48 [main] INFO :: AdvSearchPage: Operator selected for 'is included in'(picker data type) 
+2019-10-21 12:53:06 [main] INFO :: AdvSearchPage: Search value is entered
+2019-10-21 12:53:09 [main] INFO :: AdvSearchPage: Selected value for the field
+2019-10-21 12:53:16 [main] INFO :: AdvSearchPage: Operator is selected for 'on'(Date data type)
+2019-10-21 12:53:36 [main] INFO :: AdvSearchPage: Date, month and year is selected
+2019-10-21 12:53:45 [main] INFO :: AdvSearchPage: Operator is selected for 'on'(boolean data type)
+2019-10-21 12:53:45 [main] INFO :: AdvSearchPageTest: Operator and its value are added
+2019-10-21 12:53:46 [main] INFO :: AdvSearchPage: Clicked on apply search
+2019-10-21 12:53:56 [main] INFO :: AdvSearchPageTest: Clicked on apply search
+2019-10-21 12:53:56 [main] INFO :: AdvSearchPageTest: Shops are displayed
+2019-10-21 12:54:14 [main] INFO :: Desired capabilities are successfully loaded
+2019-10-21 12:54:55 [main] INFO :: HomePage: Clicked on advanced search
+2019-10-21 12:55:02 [main] INFO :: AdvSearchPage: Clicked on add field
+2019-10-21 12:55:41 [main] INFO :: AdvSearchPageTest: All the fields are selected
+2019-10-21 12:55:45 [main] INFO :: AdvSearchPageTest: Selected fields are saved
+2019-10-21 12:55:51 [main] INFO :: AdvSearchPage: Operator selected for 'start with'(String data type)
+2019-10-21 12:55:58 [main] INFO :: AdvSearchPage: Value added for 'start with'
+2019-10-21 12:56:09 [main] INFO :: AdvSearchPage: Operator is selected for 'equals'(numeric data type)
+2019-10-21 12:56:17 [main] INFO :: AdvSearchPage: Value for te field is entered
+2019-10-21 12:56:27 [main] INFO :: AdvSearchPage: Operator selected for 'is included in'(picker data type) 
+2019-10-21 12:56:42 [main] INFO :: AdvSearchPage: Search value is entered
+2019-10-21 12:56:44 [main] INFO :: AdvSearchPage: Selected value for the field
+2019-10-21 12:56:50 [main] INFO :: AdvSearchPage: Operator is selected for 'on'(Date data type)
+2019-10-21 12:57:07 [main] INFO :: AdvSearchPage: Date, month and year is selected
+2019-10-21 12:57:15 [main] INFO :: AdvSearchPage: Operator is selected for 'on'(boolean data type)
+2019-10-21 12:57:15 [main] INFO :: AdvSearchPageTest: Operator and its value are added
+2019-10-21 12:57:22 [main] INFO :: AdvSearchPage: Reset is successfull
+2019-10-21 12:57:27 [main] INFO :: AdvSearchPageTest: Reset option 'Yes' is selected
+2019-10-21 12:57:28 [main] INFO :: AdvSearchPage: Clicked on add field to validate reset
+2019-10-21 12:57:40 [main] INFO :: AdvSearchPageTest: Reset is successful

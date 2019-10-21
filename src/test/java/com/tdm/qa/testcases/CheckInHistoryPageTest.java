@@ -1,5 +1,7 @@
 package com.tdm.qa.testcases;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -22,6 +24,9 @@ public class CheckInHistoryPageTest extends BaseClass {
 	StoreMoreOptPage storemoreoptpage;
     CheckInHistoryPage checkinhistorypage;
     NearMePage nearmepage;
+    
+    Logger log=LogManager.getLogger(CheckInHistoryPageTest.class);
+	
     
 	public CheckInHistoryPageTest() {
 		super();
@@ -49,6 +54,7 @@ public class CheckInHistoryPageTest extends BaseClass {
 	@Test
 	public void verifyCheckInHist() {
 		Assert.assertTrue(checkinhistorypage.verifyCheckInHis());
+		log.info("CheckInHistoryPageTest: Check-in history page is displaying successfully");
 	}
 	
 	@AfterMethod

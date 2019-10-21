@@ -1,6 +1,8 @@
 package com.tdm.qa.testcases;
 
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -15,6 +17,8 @@ public class LoginPageTest extends BaseClass {
 
 	LoginPage loginpage;
 	HomePage homepage;
+	
+    Logger log=LogManager.getLogger(LoginPageTest.class);
 
 	public LoginPageTest() {
 		super();
@@ -32,6 +36,7 @@ public class LoginPageTest extends BaseClass {
 	{
 		homepage= loginpage.login("username", "password");
 		Assert.assertTrue(homepage.verifyNearMeLabel());
+		log.info("LoginPageTest: Login is successful");
 
 	}
 

@@ -1,11 +1,13 @@
 package com.tdm.qa.pages;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import com.tdm.qa.base.BaseClass;
+
 
 public class HierarchiesPage extends BaseClass {
 	
@@ -20,6 +22,8 @@ public class HierarchiesPage extends BaseClass {
 	
 	@FindBy(id="text1")
 	WebElement store;
+	
+	Logger log=LogManager.getLogger(HierarchiesPage.class);
 	
 	public HierarchiesPage() {
 		PageFactory.initElements(driver, this);
@@ -37,6 +41,8 @@ public class HierarchiesPage extends BaseClass {
 		} catch (InterruptedException e) {
 			
 			e.printStackTrace();
+			log.info("HierarchiesPage: Exception has occured");
+			
 		}
 	}
 	
@@ -52,6 +58,7 @@ public class HierarchiesPage extends BaseClass {
 		} catch (InterruptedException e) {
 			
 			e.printStackTrace();
+			log.info("HierarchiesPage: Exception has occured");
 		}
 	return new HomePage();	
 	}

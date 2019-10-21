@@ -1,8 +1,8 @@
-2019-10-18 16:55:50 [main] INFO :: Desired capabilities are successfully loaded
-2019-10-18 16:57:53 [main] INFO :: AddNotifPageTest: Insdie add notification block
-2019-10-18 16:58:16 [main] INFO :: AddNotifPage: Shop name is edited
-2019-10-18 16:58:39 [main] INFO :: AddNotifPage: Comments are added
-2019-10-18 16:58:44 [main] INFO :: AddNotifPage: New field is added
-2019-10-18 16:59:16 [main] INFO :: AddNotifPage: Field and its value is added
-2019-10-18 16:59:32 [main] INFO :: AddNotifPageTest: Notification is saved
-2019-10-18 16:59:39 [main] INFO :: AddNotifPageTest: Verified added notification
+2019-10-21 14:10:30 [main] INFO :: Desired capabilities are successfully loaded
+2019-10-21 14:11:11 [main] INFO :: HomePage: Clicked on more options
+2019-10-21 14:11:14 [main] INFO :: AboutPage: Inside Privacy note block
+2019-10-21 14:11:15 [main] INFO :: AboutPageTest: Privacy note link is successfully verified
+2019-10-21 14:11:15 [main] INFO :: AboutPage: Inside user manual block
+2019-10-21 14:11:15 [main] INFO :: AboutPageTest: User manual link is successfully verified
+2019-10-21 14:11:15 [main] INFO :: AboutPage: Inside Impressum block
+2019-10-21 14:11:15 [main] INFO :: AboutPageTest: Impressum link is successfully verified
