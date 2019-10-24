@@ -3,7 +3,53 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test verbose="2" name="Default test">
     <classes>
-      <class name="com.tdm.qa.testcases.AboutPageTest"/>
+      <class name="com.tdm.qa.testcases.NearMePageTest"/>
+      <class name="com.tdm.qa.testcases.MoreOptionPageTest"/>
+      <class name="com.tdm.qa.testcases.MissingStorePageTest"/>
+      <class name="com.tdm.qa.testcases.OwnDataPageTest"/>
+      <class name="com.tdm.qa.testcases.OfflineDataPageTest"/>
+      <class name="com.tdm.qa.testcases.NotificationsPageTest"/>
     </classes>
   </test> <!-- Default test -->
+  <test name="Default test(failed)">
+    <classes>
+      <class name="com.tdm.qa.testcases.OwnDataPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.tdm.qa.testcases.OwnDataPageTest -->
+      <class name="com.tdm.qa.testcases.MoreOptionPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.tdm.qa.testcases.MoreOptionPageTest -->
+      <class name="com.tdm.qa.testcases.MissingStorePageTest">
+        <methods>
+          <include name="enterMissigStoreDetails"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.tdm.qa.testcases.MissingStorePageTest -->
+      <class name="com.tdm.qa.testcases.NearMePageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.tdm.qa.testcases.NearMePageTest -->
+      <class name="com.tdm.qa.testcases.NotificationsPageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.tdm.qa.testcases.NotificationsPageTest -->
+      <class name="com.tdm.qa.testcases.OfflineDataPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.tdm.qa.testcases.OfflineDataPageTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

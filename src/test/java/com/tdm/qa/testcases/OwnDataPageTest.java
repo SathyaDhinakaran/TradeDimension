@@ -1,5 +1,7 @@
 package com.tdm.qa.testcases;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -23,7 +25,7 @@ public class OwnDataPageTest extends BaseClass{
 	StoreMoreOptPage storemoreoptpage;
 	OwnDataPage owndatapage;
    
-   
+	Logger log=LogManager.getLogger(OwnDataPageTest.class);
     
 	public OwnDataPageTest() {
 		super();
@@ -55,6 +57,7 @@ public class OwnDataPageTest extends BaseClass{
 		owndatapage.clickOnCurrentDate("date", "month", "year");
 		owndatapage.clickOnSave();
 		Assert.assertTrue(owndatapage.verifyOwnData("storePrio"));
+		log.info("OwnDataPageTest: Verified own data");
 	}
 	
 	@AfterMethod

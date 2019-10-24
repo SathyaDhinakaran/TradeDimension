@@ -1,17 +1,11 @@
 package com.tdm.qa.pages;
 
-import java.util.List;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
-
 import com.tdm.qa.base.BaseClass;
-
-import io.appium.java_client.MobileElement;
 
 public class SettingsPage extends BaseClass{
 	@FindBy(xpath="//android.widget.EditText[@index='0']")
@@ -35,7 +29,7 @@ public class SettingsPage extends BaseClass{
 	@FindBy(xpath="//*[@text='Set Legend Field']//following::android.view.ViewGroup")
 	WebElement afterReset;
 	
-	
+	Logger log=LogManager.getLogger(SettingsPage.class);
 	
 	public SettingsPage() {
 		PageFactory.initElements(driver, this);
@@ -46,17 +40,20 @@ public class SettingsPage extends BaseClass{
 		
 		try {
 			setLegendMoreOpt.click();
+			log.info("SettingsPage: Clicked on more option in set legend");
 			Thread.sleep(2000);
 			
 		} catch (InterruptedException e) {
 			
 			e.printStackTrace();
+			log.error("SettingsPage: Exception has occurred "+e.getMessage());
 		}
 		return new SelectFieldPage();
 	}
 	
 	public SettingsPage clickOnReset() {
 		reset.click();
+		log.info("SettingsPage: Clicked on reset in settings page");
 		return new SettingsPage();
 			
 	}
@@ -65,10 +62,12 @@ public class SettingsPage extends BaseClass{
 		
 		try {
 			edit.click();
+			log.info("SettingsPage: Clicked on edit option");
 			Thread.sleep(20000);
 		} catch (Exception e) {
 			
 			e.printStackTrace();
+			log.error("SettingsPage: Exception has occurred "+e.getMessage());
 		}
 			
 	}

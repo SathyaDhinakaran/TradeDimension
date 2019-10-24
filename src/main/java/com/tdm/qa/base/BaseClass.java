@@ -5,15 +5,10 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Properties;
-
+import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
-//import org.apache.logging.log4j.LogManager;
-//import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import com.tdm.qa.testcases.AboutPageTest;
-
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 
@@ -25,7 +20,7 @@ public class BaseClass {
 	public static Properties prop;
 	public static URL url;
 	public static WebDriverWait wait;
-	 Logger log=Logger.getLogger(BaseClass.class);
+	 Logger log=LogManager.getLogger(BaseClass.class);
 	
 	
 	public BaseClass() {

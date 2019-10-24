@@ -1,5 +1,7 @@
 package com.tdm.qa.testcases;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -18,6 +20,8 @@ public class MissingStorePageTest extends BaseClass{
 	MoreOptionPage moreoptionpage;
 	NotificationsPage notificationspage;
 	MissingStorePage missingstorepage;
+	
+	Logger log=LogManager.getLogger(MissingStorePageTest.class);
 	
 	public MissingStorePageTest() {
 		super();
@@ -41,8 +45,9 @@ public class MissingStorePageTest extends BaseClass{
 	@Test
 	public void enterMissigStoreDetails() {
 		missingstorepage.enterShopDetails("shopName", "streetName", "city", "outletType", "missingStoreComm", "addField", "CorrValue");
-		
+		log.info("MissingStorePageTest: Created missing store");
 		Assert.assertTrue(missingstorepage.VerifyMissingStoreN("shopName"));
+		log.info("MissingStorePageTest: verified missing store");
 	}
 	
 	@AfterMethod

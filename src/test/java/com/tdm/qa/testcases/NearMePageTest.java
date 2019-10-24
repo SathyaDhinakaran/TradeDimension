@@ -1,5 +1,7 @@
 package com.tdm.qa.testcases;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -15,6 +17,8 @@ public class NearMePageTest extends BaseClass {
 	LoginPage loginpage;
 	HomePage homepage;
 	NearMePage nearmepage;
+	
+	Logger log=LogManager.getLogger(NearMePageTest.class);
 	
 	public NearMePageTest() {
 		super();
@@ -35,10 +39,13 @@ public class NearMePageTest extends BaseClass {
 	public void validateNavigationOption() throws Exception {
 		nearmepage=	homepage.clickOnNearMe();
 		Assert.assertTrue(nearmepage.verifyNearMeShop());
+		log.info("NearMePageTest: Verified near me");
 		nearmepage.clickOnShops();
 		Assert.assertTrue(nearmepage.verifyShortInfo());
+		log.info("NearMePageTest: Verified short info");
 		nearmepage.clickOnNavigator();
 		Assert.assertTrue(nearmepage.verifyGoogleMap());
+		log.info("NearMePageTest: Verified google navigation");
 	}
 	
 	@AfterMethod

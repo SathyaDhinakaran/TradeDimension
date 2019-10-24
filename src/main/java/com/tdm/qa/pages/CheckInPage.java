@@ -37,6 +37,7 @@ public class CheckInPage extends BaseClass{
 		} catch (InterruptedException e) {
 			
 			e.printStackTrace();
+			log.error("CheckInPage: Exception has occurred "+e.getMessage());
 		}
 		
 	}

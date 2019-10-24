@@ -73,7 +73,7 @@ public class AddNotifPage extends BaseClass {
 		} catch (Exception e) {
 			
 			e.printStackTrace();
-			log.error("AddNotifPage: Exception has occured");
+			log.error("AddNotifPage: Exception has occured "+e.getMessage());
 			
 		}
 		
@@ -100,7 +100,7 @@ public class AddNotifPage extends BaseClass {
 				} catch (InterruptedException e) {
 					
 					e.printStackTrace();
-					log.error("AddNotifPage: Exception has occured");
+					log.error("AddNotifPage: Exception has occured "+e.getMessage());
 				}
 				
 			}
@@ -114,7 +114,7 @@ public class AddNotifPage extends BaseClass {
 					} catch (InterruptedException e) {
 						
 						e.printStackTrace();
-						log.error("AddNotifPage: Exception has occured");
+						log.error("AddNotifPage: Exception has occured "+e.getMessage());
 					}
 				
 			}

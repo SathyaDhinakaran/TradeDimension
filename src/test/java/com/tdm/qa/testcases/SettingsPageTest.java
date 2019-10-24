@@ -1,5 +1,7 @@
 package com.tdm.qa.testcases;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -19,6 +21,8 @@ public class SettingsPageTest extends BaseClass {
 	MoreOptionPage moreoptionpage;
 	SettingsPage settingspage;
 	SelectFieldPage selectfieldpage;
+	
+	Logger log=LogManager.getLogger(SettingsPageTest.class);
 	
 	public SettingsPageTest() {
 		super();
@@ -45,6 +49,7 @@ public class SettingsPageTest extends BaseClass {
 		selectfieldpage.clickOnBackBtn();
 		settingspage.clickOnReset();
 		Assert.assertTrue(settingspage.afterReset());
+		log.info("SettingsPage: Reset is successful");
 	}
 	
 	@AfterMethod

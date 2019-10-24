@@ -1,5 +1,7 @@
 package com.tdm.qa.testcases;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -18,6 +20,9 @@ public class OfflineDataPageTest extends BaseClass {
 	MoreOptionPage moreoptionpage;
 	OfflineDataPage offlinedatapage;
     ResultListPage resultlistpage;
+    
+    Logger log=LogManager.getLogger(OfflineDataPageTest.class);
+	
 	
 	public OfflineDataPageTest() {
 		super();
@@ -47,7 +52,8 @@ public class OfflineDataPageTest extends BaseClass {
 		resultlistpage.clickOnMap();	
 		homepage.clickOnMoreOption();
 		moreoptionpage.clickOnOfflineData();
-	Assert.assertTrue(offlinedatapage.verifyDownloadedData("downloadName"));	
+	    Assert.assertTrue(offlinedatapage.verifyDownloadedData("downloadName"));	
+	    log.info("OfflineDataPageTest: Verified offline data");
 		
 	}
 	

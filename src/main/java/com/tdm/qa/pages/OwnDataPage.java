@@ -2,6 +2,8 @@ package com.tdm.qa.pages;
 
 import java.util.List;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -44,7 +46,7 @@ public class OwnDataPage extends BaseClass{
 	@FindBy(xpath="//*[@text='TDLinx']")
 	WebElement clickOutside;
 	
-	
+	Logger log=LogManager.getLogger(OwnDataPage.class);
 	
 public OwnDataPage() {
 	PageFactory.initElements(driver, this);
@@ -54,7 +56,7 @@ public void enterStorePrio(String prio) {
 	
 	storePrio.clear();
 	storePrio.sendKeys(prop.getProperty(prio));
-	
+	log.info("OwnDataPage: entered store priority value");
 	clickOutside.click();
 }
 	
@@ -62,6 +64,7 @@ public void enterStorePrio(String prio) {
 public void selectOrderOnli() {
 	orderOnl.click();
 	yes.click();
+	log.info("OwnDataPage: Selected order online yes");
 	clickOutside.click();
 	//no.click();  //select no if required by default kept yes.
 }
@@ -72,6 +75,7 @@ public void clickOnCurrentDate(String date, String mon, String year) throws Exce
 	
 	if(dolVisit.getText().isEmpty()) {
 		dolVisit.click();
+		log.info("OwnDataPage: current date value is entered");
 		
 	}
 	else {
@@ -87,6 +91,7 @@ public void clickOnCurrentDate(String date, String mon, String year) throws Exce
 			driver.findElement(By.id("date_picker_header_year")).click();
 			Thread.sleep(2000);
 			TestUtil.scrollUpAndDownWithClick(year);
+			log.info("OwnDataPage: Selected year");
 			
 		}
 		
@@ -111,6 +116,7 @@ public void clickOnCurrentDate(String date, String mon, String year) throws Exce
 		}
 	}
 	
+	log.info("OwnDataPage: entered month and date");
 driver.findElement(By.xpath("//*[@text='OK']")).click();
 }}
 
@@ -118,11 +124,13 @@ public void clickOnSave() {
 	
 	try {
 		save.click();
+		log.info("OwnDataPage: Saved own data");
 		Thread.sleep(5000);
 		
 	} catch (InterruptedException e) {
 		
 		e.printStackTrace();
+		log.error("OwnDataPage: Exception has occurred "+e.getMessage());
 	}
 }
 

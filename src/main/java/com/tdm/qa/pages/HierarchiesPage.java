@@ -41,7 +41,7 @@ public class HierarchiesPage extends BaseClass {
 		} catch (InterruptedException e) {
 			
 			e.printStackTrace();
-			log.info("HierarchiesPage: Exception has occured");
+			log.info("HierarchiesPage: Exception has occured "+e.getMessage());
 			
 		}
 	}
@@ -58,7 +58,7 @@ public class HierarchiesPage extends BaseClass {
 		} catch (InterruptedException e) {
 			
 			e.printStackTrace();
-			log.info("HierarchiesPage: Exception has occured");
+			log.info("HierarchiesPage: Exception has occured "+e.getMessage());
 		}
 	return new HomePage();	
 	}

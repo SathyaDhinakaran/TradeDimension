@@ -1,5 +1,7 @@
 package com.tdm.qa.testcases;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -21,6 +23,7 @@ public class ResultListPageTest extends BaseClass {
 	ResultListPage resultlistpage;
 	OfflineDataPage offlinedatapage;
 	
+	Logger log=LogManager.getLogger(ResultListPageTest.class);
 	
 	public ResultListPageTest() {
 		super();
@@ -40,8 +43,11 @@ public class ResultListPageTest extends BaseClass {
 	@Test(priority=1)
 	public void verifyResultList() {
 		homepage.clickOnMoreOption();
+		log.info("ResultListPageTest: clicked on more option in homepage");
 		moreoptionpage.clickOnResultList();
+		log.info("ResultListPageTest: clicked on result list ");
 		Assert.assertTrue(resultlistpage.verifyResultListPage());
+		log.info("ResultListPageTest: Result list page is displayed successfully");
 	}
 	
 	

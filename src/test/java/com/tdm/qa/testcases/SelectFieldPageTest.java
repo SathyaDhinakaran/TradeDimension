@@ -1,5 +1,7 @@
 package com.tdm.qa.testcases;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -20,6 +22,8 @@ public class SelectFieldPageTest extends BaseClass{
 	MoreOptionPage moreoptionpage;
 	SettingsPage settingspage;
 	SelectFieldPage selectfieldpage;
+	
+	Logger log=LogManager.getLogger(SelectFieldPageTest.class);
 	
 	public SelectFieldPageTest() {
 		super();
@@ -46,6 +50,7 @@ public class SelectFieldPageTest extends BaseClass{
 		selectfieldpage.selectField("setLegendField");
 		selectfieldpage.clickOnBackBtn();
 		Assert.assertTrue(moreoptionpage.verifySettingsPage());
+		log.info("SelectFieldPageTest: Verified set legend field");
 	
 	}
 
@@ -58,7 +63,7 @@ public class SelectFieldPageTest extends BaseClass{
 		homepage.clickOnLegendList();
 		Thread.sleep(2000);
 		Assert.assertEquals(homepage.getLegHeader(),prop.getProperty("setLegendField") );
-		System.out.println("success");
+		log.info("SelectFieldPage: Verified set legend is getting displayed in homepage");
 	}
 	
 	@AfterMethod

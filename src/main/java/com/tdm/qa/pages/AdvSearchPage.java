@@ -95,7 +95,7 @@ public class AdvSearchPage extends BaseClass {
 		} catch (InterruptedException e) {
 			 
 			e.printStackTrace();
-			log.error("AdvSearchPage: Exception has occured");
+			log.error("AdvSearchPage: Exception has occured "+e.getMessage());
 		}
 	}
 	
@@ -113,7 +113,7 @@ public class AdvSearchPage extends BaseClass {
 		} catch (InterruptedException e) {
 			
 			e.printStackTrace();
-			log.error("AdvSearchPage: Exception has occured");
+			log.error("AdvSearchPage: Exception has occured "+e.getMessage());
 			
 		}
 						
@@ -235,7 +235,7 @@ else if(defaultOper.contentEquals("equals")) {
 		} catch (InterruptedException e) {
 			
 			e.printStackTrace();
-			log.error("AdvSearchPage: Exception has occured");
+			log.error("AdvSearchPage: Exception has occured "+e.getMessage());
 			
 		}
 	}
@@ -249,7 +249,7 @@ else if(defaultOper.contentEquals("equals")) {
 		} catch (InterruptedException e) {
 			
 			e.printStackTrace();
-			log.error("AdvSearchPage: Exception has occured");
+			log.error("AdvSearchPage: Exception has occured "+e.getMessage());
 			
 		}
 	}
@@ -271,7 +271,7 @@ else if(defaultOper.contentEquals("equals")) {
 		} catch (InterruptedException e) {
 		
 			e.printStackTrace();
-			log.error("AdvSearchPage: Exception has occured");
+			log.error("AdvSearchPage: Exception has occured "+e.getMessage());
 			
 		}
 		

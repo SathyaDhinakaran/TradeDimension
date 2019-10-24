@@ -1,5 +1,7 @@
 package com.tdm.qa.testcases;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -20,11 +22,12 @@ public class StoreDetailsPageTest extends BaseClass{
 	PrevCheckinPage prevcheckinpage;
 	StoreDetailsPage storedetailspage;
 	
+	Logger log=LogManager.getLogger(StoreDetailsPageTest.class);
+	
 	public StoreDetailsPageTest() {
 		super();
 	}
 
-	
 	@BeforeMethod
 	public void setUp() throws Exception {
 		initialization();
@@ -42,6 +45,7 @@ public class StoreDetailsPageTest extends BaseClass{
 	public void verifyStoreHierarchy() {
 		storedetailspage.clickOnHierarchy();
 		Assert.assertTrue(storedetailspage.verifyHierarchyPage());
+		log.info("StoreDetailsPageTest: Verified store hierarchy");
 	}
 	
 	

@@ -1,5 +1,7 @@
 package com.tdm.qa.testcases;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -17,6 +19,8 @@ public class NotificationsPageTest extends BaseClass{
 	HomePage homepage;
 	MoreOptionPage moreoptionpage;
 	NotificationsPage notificationspage;
+	
+	Logger log=LogManager.getLogger(NotificationsPageTest.class);
 	
 	public NotificationsPageTest() {
 		super();
@@ -36,8 +40,10 @@ moreoptionpage.clickOnNotifications();
 @Test(priority=1)
 public void missingStore() {
 	Assert.assertTrue(notificationspage.verifyNotifiScreen());
+	log.info("NotificationsPageTest: Verified history by user page is getting displayed");
 	notificationspage.clickOnMissingStore();
 	Assert.assertTrue(notificationspage.verifyMissingStore());
+	log.info("NotificationsPageTest: Missing store notification page is getting displayed");
 }
 
 

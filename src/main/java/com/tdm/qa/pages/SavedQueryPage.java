@@ -1,14 +1,12 @@
 package com.tdm.qa.pages;
 
-import static org.testng.Assert.assertNull;
 
-import java.util.NoSuchElementException;
-
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import com.tdm.qa.base.BaseClass;
 import com.tdm.qa.util.TestUtil;
 
@@ -65,6 +63,8 @@ public class SavedQueryPage extends BaseClass{
 	@FindBy(xpath="//*[@text='Yes']")
 	WebElement yes;
 	
+	Logger log=LogManager.getLogger(SavedQueryPage.class);
+	
 	public SavedQueryPage() {
 		PageFactory.initElements(driver, this);
 	}
@@ -85,10 +85,12 @@ public class SavedQueryPage extends BaseClass{
 			try {
 				
 				TestUtil.scrollUpAndDownWithClick(queryN);
+				log.info("SavedQueryPage: Clicked on query");
 				Thread.sleep(5000);
 			} catch (InterruptedException e) {
 				
 				e.printStackTrace();
+				log.error("SavedQueryPage: Exception has occurred "+e.getMessage());
 			}
 	}
 	
@@ -96,10 +98,12 @@ public class SavedQueryPage extends BaseClass{
 		try {
 			
 			applySearch.click();
+			log.info("SavedQueryPage: Clicked on apply search");
 			Thread.sleep(10000);
 		} catch (InterruptedException e) {
 			
 			e.printStackTrace();
+			log.error("SavedQueryPage: Exception has occurred "+e.getMessage());
 		}
 		
 }
@@ -108,10 +112,12 @@ public class SavedQueryPage extends BaseClass{
 		
 		try {
 			editBtn.click();
+			log.info("SavedQueryPage: Clicked on edit query");
 			Thread.sleep(4000);
 		} catch (InterruptedException e) {
 			
 			e.printStackTrace();
+			log.error("SavedQueryPage: Exception has occurred "+e.getMessage());
 		}
 		
 	}
@@ -120,28 +126,37 @@ public class SavedQueryPage extends BaseClass{
 		
 		try {
 			addField.click();
+			log.info("SavedQueryPage: Clicked on add fields");
 			Thread.sleep(2000);
 			TestUtil.scrollUpAndDownWithClick(addFieldN);
 			saveField.click(); 
+			log.info("SavedQueryPage: Added new field");
 			TestUtil.scrollUpAndDown(addFieldN);
 			driver.findElement(By.xpath("//*[@text='"+prop.getProperty(addFieldN)+"']//following::android.view.ViewGroup[@index='2']")).click();
 			driver.findElement(By.xpath("//*[@text='"+prop.getProperty(op)+"']")).click();
 			selOper.click();
+			log.info("SavedQueryPage: Selected operator for the newly added field");
 			Thread.sleep(2000);
 			
 		driver.findElement(By.xpath("//*[@text='"+prop.getProperty(addFieldN)+"']//following::android.view.ViewGroup[@index='3']")).click();
+		log.info("SavedQueryPage: Clicked on dropdown");
 		Thread.sleep(2000);
 		addValBackBtn.click();
 		driver.findElement(By.xpath("//*[@text='"+prop.getProperty(addFieldN)+"']//following::android.view.ViewGroup[@index='3']")).click();
 		Thread.sleep(2000);
 		searchtxt.click();
+		log.info("SavedQueryPage: Clicked on search field");
 		searchtxt.sendKeys(prop.getProperty(val));
+		log.info("SavedQueryPage: Entered value in search text field");
 		driver.findElement(By.xpath("//android.widget.TextView[@text='"+prop.getProperty(val)+"']")).click();
+		log.info("SavedQueryPage: Selected field value");
 		saveValues.click();
+		log.info("SavedQueryPage: Added field value");
 			
 		} catch (InterruptedException e) {
 			
 			e.printStackTrace();
+			log.error("SavedQueryPage: Exception has occurred "+e.getMessage());
 		}
 		  
 		
@@ -152,14 +167,19 @@ public class SavedQueryPage extends BaseClass{
 			Thread.sleep(2000);
 			savedQryScreen.click();
 			saveBtn.click();
+			log.info("SavedQueryPage: Clicked on Save button");
 			saveAs.click();
+			log.info("SavedQueryPage: Selected SaveAs option");
 			enterQueryN.click();
 			enterQueryN.sendKeys(prop.getProperty(saveQryN));
+			log.info("SavedQueryPage: Entered save as name");
 			driver.findElement(By.xpath("//*[@text='"+prop.getProperty(saveQryN)+"']//following::android.widget.ImageView")).click();
+			log.info("SavedQueryPage: Save As query is saved");
 			
 		} catch (InterruptedException e) {
 			
 			e.printStackTrace();
+			log.error("SavedQueryPage: Exception has occurred "+e.getMessage());
 		}
 		
 	}
@@ -172,10 +192,12 @@ public class SavedQueryPage extends BaseClass{
 			driver.findElement(By.xpath("//*[@text='"+prop.getProperty(fieldN)+"']//following::android.view.ViewGroup[@index='2']")).click();
 			driver.findElement(By.xpath("//*[@text='"+prop.getProperty(op)+"']")).click();
 			selOper.click();
+			log.info("SavedQueryPage: Modified operator for the field");
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
 			
 			e.printStackTrace();
+			log.error("SavedQueryPage: Exception has occurred "+e.getMessage());
 		}
 		
 	}
@@ -185,11 +207,14 @@ public class SavedQueryPage extends BaseClass{
 		try {
 			savedQryScreen.click();
 			saveBtn.click();
+			log.info("SavedQueryPage: Clicked on save option");
 			querySave.click();
+			log.info("SavedQueryPage: Selected save option");
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
 			
 			e.printStackTrace();
+			log.error("SavedQueryPage: Exception has occurred "+e.getMessage());
 		}
 	}
 	
@@ -201,10 +226,13 @@ public class SavedQueryPage extends BaseClass{
 			String expected=prop.getProperty(exp);
 			System.out.println("Expected: "+expected);
 			if(actual.contentEquals(expected)) 
+			{
+				log.info("SavedQueryPage: Verified saved query");
 				return true;
-			else 
+			}else {
+				log.error("SavedQueryPage: Error in verifying saved query");
 				return false;
-				
+			}
 	}
 	
 	public void deleteQuery(String qryN) {
@@ -213,10 +241,12 @@ public class SavedQueryPage extends BaseClass{
 			TestUtil.scrollUpAndDown(qryN);
 			driver.findElement(By.xpath("//*[@text='"+prop.getProperty(qryN)+"']//following::android.view.ViewGroup[@index='2']")).click();
 			yes.click();
+			log.info("SavedQueryPage: Deleted query");
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
 			
 			e.printStackTrace();
+			log.error("SavedQueryPage: Exception has occurred "+e.getMessage());
 		}
 		
 	}
@@ -233,20 +263,27 @@ public class SavedQueryPage extends BaseClass{
 			editBtn.click();
 			TestUtil.scrollUpAndDown(field);
 			driver.findElement(By.xpath("//*[@text='"+prop.getProperty(field)+"']//following::android.view.ViewGroup[@index='4']")).click();
+			log.info("SavedQueryPage: Deleted field");
 			addField.click();
+			log.info("SavedQueryPage: clicked on add field");
 			Thread.sleep(2000);
 			TestUtil.scrollUpAndDown(field);
 			driver.findElement(By.xpath("//*[@text='"+prop.getProperty(field)+"']")).isDisplayed();
+			log.info("SavedQueryPage: Verified the deleted field is added back to the add fields list");
 			Thread.sleep(2000);
 			addFieldBackBtn.click();
 			savedQryScreen.click();
 			resetBtn.click();
+			log.info("SavedQueryPage: Clicked on reset");
 			yes.click();
+			log.info("SavedQueryPage: Selected Reset-Yes");
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
 			
 			e.printStackTrace();
+			log.error("SavedQueryPage: Exception has occurred "+e.getMessage());
 		}
+		
 		
 		
 	}
@@ -262,6 +299,7 @@ public class SavedQueryPage extends BaseClass{
 		} catch (InterruptedException e) {
 			
 			e.printStackTrace();
+			log.error("SavedQueryPage: Exception has occurred: "+e.getMessage());
 		}
 		TestUtil.scrollUpAndDown(field);
 		return driver.findElement(By.xpath("//*[@text='"+prop.getProperty(field)+"']")).isDisplayed();

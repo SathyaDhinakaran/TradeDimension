@@ -1,5 +1,7 @@
 package com.tdm.qa.testcases;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -20,6 +22,8 @@ public class MoreOptionPageTest extends BaseClass {
 	NearMePage nearmepage;
 	MoreOptionPage moreoptionpage;
 	
+	Logger log=LogManager.getLogger(MoreOptionPageTest.class);
+	
 	public MoreOptionPageTest() {
 		super();
 	}
@@ -37,7 +41,9 @@ public class MoreOptionPageTest extends BaseClass {
 	@Test(priority=1)
 	public void verifyMoreOptionpopup() {
 		homepage.clickOnMoreOption();
+		log.info("MoreOptionPageTest: clicked on more option");
 		Assert.assertTrue(moreoptionpage.verifyMoreOptionPopUp());
+		log.info("MoreOptionPageTest: More option menu is getting displayed");
 	}
 @AfterMethod
 public void tearDown() {

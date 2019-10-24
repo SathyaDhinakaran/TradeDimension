@@ -1,14 +1,14 @@
 package com.tdm.qa.testcases;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
 import com.tdm.qa.base.BaseClass;
 import com.tdm.qa.pages.HomePage;
 import com.tdm.qa.pages.LoginPage;
-import com.tdm.qa.pages.MoreOptionPage;
 import com.tdm.qa.pages.NearMePage;
 import com.tdm.qa.pages.PrevCheckinPage;
 import com.tdm.qa.pages.StoreDetailsPage;
@@ -23,6 +23,7 @@ public class StoreMoreOptPageTest extends BaseClass{
 	NearMePage nearmepage;
 	PrevCheckinPage prevcheckinpage;
 	
+	Logger log=LogManager.getLogger(StoreMoreOptPageTest.class);
 	
 	public StoreMoreOptPageTest() {
 		super();
@@ -46,6 +47,7 @@ public class StoreMoreOptPageTest extends BaseClass{
 		
 			storedetailspage.clickOnMoreOpt();
 			Assert.assertTrue(storedetailspage.verifyMoreOpt());
+			log.info("StoreMoreOptPageTest: Verified more option in store details page");
 		
 	}
 	

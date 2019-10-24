@@ -1,5 +1,7 @@
 package com.tdm.qa.pages;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -20,6 +22,7 @@ public class PrevCheckinPage extends BaseClass {
 	@FindBy(xpath="//android.view.ViewGroup[@index='2']")
 	WebElement hierarchyIcon;
 	
+	Logger log=LogManager.getLogger(PrevCheckinPage.class);
 	
 	public PrevCheckinPage() {
 		PageFactory.initElements(driver, this);
@@ -37,10 +40,12 @@ public class PrevCheckinPage extends BaseClass {
 		
 		try {
 			clickOnShop.click();
+			log.info("PrevCheckinPage: clicked on first shop in previous checkin page");
 			Thread.sleep(3000);
 		} catch (InterruptedException e) {
 			
 			e.printStackTrace();
+			log.error("PrevCheckinPage: Exception has occured "+e.getMessage());
 		}
 		return new StoreDetailsPage();
 	}

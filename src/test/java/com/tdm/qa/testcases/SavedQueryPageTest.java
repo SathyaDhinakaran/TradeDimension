@@ -1,5 +1,7 @@
 package com.tdm.qa.testcases;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -19,6 +21,8 @@ public class SavedQueryPageTest extends BaseClass{
 	SavedQueryPage savedquerypage;
 	NearMePage nearmepage;
 	AdvSearchPage advsearchpage;
+	
+	Logger log=LogManager.getLogger(SavedQueryPageTest.class);
 	
 	public SavedQueryPageTest() {
 		super();
@@ -41,6 +45,7 @@ public class SavedQueryPageTest extends BaseClass{
 	public void verifySavedQueryPage() {
 	
 		Assert.assertTrue(savedquerypage.verifySavedQueryPage());
+		log.info("SavedQueryPageTest: Verified saved query page");
 	}
 	
 	@Test(priority=2)
@@ -48,6 +53,7 @@ public class SavedQueryPageTest extends BaseClass{
 	savedquerypage.editQuery("saveQueryName");
 		savedquerypage.applySearch();
 		Assert.assertTrue(nearmepage.verifyNearMeShop());
+		log.info("SavedQueryPageTest: Verified apply search");
 		   
 	}
 	
@@ -62,6 +68,7 @@ public class SavedQueryPageTest extends BaseClass{
 			Thread.sleep(2000);
 			homepage.clickOnSavedQuery();
 			Assert.assertTrue(savedquerypage.verifySavedQry("saveQueryName"));
+			log.info("SavedQueryPageTest: Verified SavedAs query");
 		} catch (Exception e) {
 			
 			e.printStackTrace();
@@ -81,6 +88,7 @@ public class SavedQueryPageTest extends BaseClass{
 			savedquerypage.editQuery("saveQueryName");
 			savedquerypage.clickOnEdit();
 			Assert.assertTrue(savedquerypage.verifySaveQuery("advField4", "saveOp"));
+			log.info("SavedQueryPageTest: Verified saved query");
 			
 		} catch (Exception e) {
 		
@@ -96,6 +104,7 @@ public class SavedQueryPageTest extends BaseClass{
 		
 		savedquerypage.reset("advField4");
 		Assert.assertTrue(savedquerypage.verifyReset("advField4"));
+		log.info("SavedQueryPageTest: Verified Reset query");
 	
 	}
 	
@@ -106,6 +115,7 @@ public class SavedQueryPageTest extends BaseClass{
 		savedquerypage.deleteQuery("saveQueryName");
 		Assert.assertEquals(0, savedquerypage.veifyDeletedQry("saveAsName"));
 		Assert.assertEquals(0, savedquerypage.veifyDeletedQry("saveQueryName"));
+		log.info("SavedQueryPageTest: Verified delete query");
 	}
 	
 	@AfterMethod

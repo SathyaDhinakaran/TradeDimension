@@ -1,5 +1,7 @@
 package com.tdm.qa.testcases;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
@@ -22,6 +24,8 @@ public class SettingsEditPageTest extends BaseClass {
 	SettingsPage settingspage;
 	SelectFieldPage selectfieldpage;
 	SettingsEditPage settingseditpage;
+	
+	Logger log=LogManager.getLogger(SettingsEditPageTest.class);
 	
 	public SettingsEditPageTest() {
 		super();
@@ -51,6 +55,7 @@ public class SettingsEditPageTest extends BaseClass {
 	public void selectReset() {
 		settingseditpage.clickOnReset();
 		Assert.assertTrue(moreoptionpage.verifySettingsPage());
+		log.info("SettingsEditPageTest: Verify icon reset");
 	}
 	
 	

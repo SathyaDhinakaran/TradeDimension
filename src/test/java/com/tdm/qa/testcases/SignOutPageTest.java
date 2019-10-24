@@ -1,5 +1,7 @@
 package com.tdm.qa.testcases;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -17,6 +19,8 @@ public class SignOutPageTest extends BaseClass {
 	HomePage homepage;
 	MoreOptionPage moreoptionpage;
 	SignOutPage signoutpage;
+	
+	Logger log=LogManager.getLogger(SignOutPageTest.class);
 	
 	public SignOutPageTest() {
 		super();
@@ -38,8 +42,10 @@ public class SignOutPageTest extends BaseClass {
 		homepage.clickOnMoreOption();
 		moreoptionpage.clickOnSignOut();
 		Assert.assertTrue(signoutpage.verifySignOutPopUp());
+		log.info("SignOutPageTest: Signout pop up is getting displayed");
 		signoutpage.clickOnNo();
 		Assert.assertTrue(homepage.verifyNearMeLabel());
+		log.info("SignOutPageTest: App remains in homepage");
 		
 	}
 	@Test(priority=2)
@@ -47,9 +53,10 @@ public class SignOutPageTest extends BaseClass {
 		homepage.clickOnMoreOption();
 		moreoptionpage.clickOnSignOut();
 		Assert.assertTrue(signoutpage.verifySignOutPopUp());
+		log.info("SignOutPageTest: Signout pop up is getting displayed");
 		signoutpage.clickOnYes();
 		Assert.assertTrue(loginpage.verifySignInScreen());
-		
+		log.info("SignOutPageTest: Logout is successfully");
 	}
 	
 	@AfterMethod

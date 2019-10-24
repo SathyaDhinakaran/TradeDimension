@@ -1,5 +1,7 @@
 package com.tdm.qa.testcases;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -18,6 +20,8 @@ public class PrevCheckinPageTest extends BaseClass{
 	NearMePage nearmepage;
 	PrevCheckinPage prevcheckinpage;
 	
+	Logger log=LogManager.getLogger(PrevCheckinPageTest.class);
+	
 	@BeforeMethod
 	public void setUp() throws Exception {
 		initialization();
@@ -31,9 +35,11 @@ public class PrevCheckinPageTest extends BaseClass{
 	public void validatePrevCheckin() throws Exception {
 		homepage.clickOnPrevCheckin();
 		Assert.assertTrue(prevcheckinpage.verifyCheckInHistory());
+		log.info("PrevCheckinPageTest: Previous checkin page is verified");
 		Assert.assertTrue(prevcheckinpage.verifyCheckin());
 		prevcheckinpage.clickOnFirstShop();
 		Assert.assertTrue(prevcheckinpage.verifyHierarchyIcon());
+		log.info("PrevCheckinPageTest: Store details page is getting displayed");
 	}
 	
 	
