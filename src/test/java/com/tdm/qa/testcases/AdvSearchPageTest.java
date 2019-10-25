@@ -28,7 +28,7 @@ public class AdvSearchPageTest extends BaseClass{
 		super();
 	}
 
-	@BeforeMethod
+	@BeforeMethod(alwaysRun = true)
 	public void setUp() throws Exception {
 		initialization();
 		loginpage=new LoginPage();

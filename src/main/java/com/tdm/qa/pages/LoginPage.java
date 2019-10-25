@@ -3,10 +3,13 @@ package com.tdm.qa.pages;
 
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+
 import com.tdm.qa.base.BaseClass;
 
 public class LoginPage extends BaseClass{
@@ -19,11 +22,9 @@ public class LoginPage extends BaseClass{
 	@CacheLookup
 	WebElement password;
 	
-	
 	@FindBy(xpath="//*[@class='android.widget.ImageView']")
 	WebElement clickOutside;
-	
-		
+			
 	@FindBy(xpath="//*[@text='Sign in']")
 	WebElement loginBtn;
 	
@@ -58,8 +59,8 @@ public class LoginPage extends BaseClass{
 		clickOutside.click();
 		loginBtn.click();
 		log.info("LoginPage: clicked on login");
-		Thread.sleep(20000);
-		//wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Near Me']")));
+		//Thread.sleep(20000);
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Near Me']")));
 		return new HomePage();
 	}
 	

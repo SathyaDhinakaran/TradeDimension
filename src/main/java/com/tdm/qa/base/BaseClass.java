@@ -54,7 +54,7 @@ public class BaseClass {
 			driver=new AndroidDriver(url,caps);
 			log.info("Desired capabilities are successfully loaded");
 			driver.manage().deleteAllCookies();
-			wait=new WebDriverWait(driver,50);
+			wait=new WebDriverWait(driver,120);
 			Thread.sleep(3000);
 			
 			

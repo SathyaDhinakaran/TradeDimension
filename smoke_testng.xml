@@ -10,10 +10,11 @@
 
   <test name="TDM Automation">
     <classes>
+      
        <class name="com.tdm.qa.testcases.AdvSearchPageTest"/>
        <class name="com.tdm.qa.testcases.HierarchiesPageTest"/>
        <class name="com.tdm.qa.testcases.OfflineDataPageTest"/>
-       <class name="com.tdm.qa.testcases.LoginPageTest"/>
+        <class name="com.tdm.qa.testcases.LoginPageTest"/>
        <class name="com.tdm.qa.testcases.HomePageTest"/>
        <class name="com.tdm.qa.testcases.NearMePageTest"/>
        <class name="com.tdm.qa.testcases.PrevCheckinPageTest"/>
